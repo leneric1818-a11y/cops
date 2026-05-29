@@ -1,0 +1,49 @@
+experiment_name: label_conditioned_generation
+pipeline: label_conditioned_generation
+
+dataset:
+  path: ${NCP_EVAL_DATA_PATH}
+  history_field: conversation_history
+  persona_field: personality_condition
+  persona_name_field: persona_name
+  target_field: target_label
+  target_source: dataset
+
+label_descriptions:
+  path: ${CATEGORY_DESCRIPTIONS_PATH}
+
+few_shot:
+  data_path: ${NCP_FEWSHOT_DATA_PATH}
+  label_field: label
+  utterance_field: final_utterance
+  speaker_field: speaker
+  max_examples: 3
+  seed: 42
+
+llm:
+  base_model: unsloth/Qwen3-4B-unsloth-bnb-4bit
+  use_unsloth: true
+  load_in_4bit: true
+  max_seq_len: 3072
+  prompt_template: templates/label_conditioned_prompt.txt
+  generation:
+    max_new_tokens: 128
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 50
+    do_sample: true
+    repetition_penalty: 1.05
+
+oncoco:
+  model_path: ${ONCOCO_MODEL_PATH}
+  mapping_path: ${ONCOCO_MAPPING_PATH}
+  topk: 3
+
+output_path: outputs/metrics/label_conditioned_generation.jsonl
+summary_path: outputs/metrics/label_conditioned_generation_summary.json
+store_prompt: false
+
+slurm:
+  cluster: cluster_a
+  template: slurm/templates/cluster_a.sh.j2
+  command: python -m scripts.run_experiment --config configs/experiments/label_conditioned_generation.yaml

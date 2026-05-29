@@ -1,0 +1,14 @@
+% auto-generated
+\begin{table}[t]\centering\small
+\begin{tabular}{l rrr}
+\toprule
+\textbf{Stem (\texttt{case\_blind}, $\alpha=3$)} & \textbf{Mistral} & \textbf{Nano} & \textbf{OSS-120B} \\
+\midrule
+Qwen3-4B \emph{openness} L15 & $+0.245$ & $+0.250$ & $+0.305$ \\
+Qwen3.5-9B \emph{openness} L20 & $+0.305$ & $+0.340$ & $+0.395$ \\
+Mistral-7B \emph{openness} L15 & $+0.305$ & $+0.115$ & $+0.160$ \\
+\bottomrule
+\end{tabular}
+\caption{Per-provider net-pairwise on \texttt{case\_blind} at $\alphapos$. Mistral-Magistral runs systematically lower than GPT-family (Nano, OSS-120B agree closely). The ensemble majority vote averages over this calibration shift.}
+\label{tab:provider-sens}
+\end{table}

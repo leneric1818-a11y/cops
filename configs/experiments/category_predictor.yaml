@@ -1,0 +1,26 @@
+experiment_name: category_predictor_swda
+pipeline: category_predictor
+
+dataset:
+  name: swda
+  path: data/processed/swda.jsonl
+  history_field: conversation_history
+  label_field: label
+  use_last_utterance: true
+
+model:
+  base_model: bert-base-uncased
+
+training:
+  epochs: 3
+  lr: 2e-5
+  batch_size: 8
+  gradient_accumulation_steps: 1
+  max_length: 256
+
+output_dir: outputs/checkpoints/category_predictor_swda
+
+slurm:
+  cluster: cluster_a
+  template: slurm/templates/cluster_a.sh.j2
+  command: python -m scripts.train_category_predictor --config configs/experiments/category_predictor.yaml

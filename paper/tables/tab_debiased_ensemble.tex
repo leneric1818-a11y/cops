@@ -1,0 +1,30 @@
+% Position-debiased ensemble — single vs averaged-delta decisions, 120-example sample
+\begin{table}[t]\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Judge} &
+  \multicolumn{2}{c}{\textbf{Single ordering}} &
+  \multicolumn{3}{c}{\textbf{Debiased ensemble}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+ & win\% & tie\% & win\% & tie\% & changed & easy acc \\
+\midrule
+GPT-5.4-mini      & 67.5 & 13.3 & 60.8 & 20.0 & 25 & 74.6 \\
+Mistral-Small-24B & 61.7 &  0.0 & 45.8 & 33.3 & \textbf{45} & 70.2 \\
+Llama-3.3-70B     & 53.4 & 10.2 & 52.5 & 22.0 & 33 & 73.9 \\
+GPT-OSS-120B      & 60.0 &  7.5 & 55.0 & 21.7 & \underline{22} & \textbf{84.2} \\
+\midrule
+4-judge majority  & \multicolumn{2}{c}{---} & 61.0 & 13.6 & --- & --- \\
+\bottomrule
+\end{tabular}
+\caption{%
+  Effect of position-debiased ensemble on 120 consistency-sample examples.
+  \textbf{win\%}: steered-wins rate; \textbf{tie\%}: tie rate.
+  Debiased ensemble averages axis-alignment deltas across both A/B orderings
+  (original + swapped) and infers pairwise winner from the average sign.
+  \textbf{changed}: decisions altered vs.\ single-ordering.
+  \textbf{easy acc}: leave-one-out anchor accuracy on examples where 3 peer judges agree
+  (\textbf{bold} = best, \underline{underline} = fewest changes).
+}
+\label{tab:debiased-ensemble}
+\end{table}

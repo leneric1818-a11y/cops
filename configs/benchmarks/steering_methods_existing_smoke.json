@@ -1,0 +1,46 @@
+{
+  "name": "steering_methods_existing_smoke",
+  "classifier_train_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200_flat.jsonl",
+  "runs": [
+    {
+      "name": "paired_dense_layer_compare_open",
+      "family": "paired_dense",
+      "target_style": "open",
+      "output_path": "outputs/metrics/paired_dense_layer_compare_gpt54mini_124931.jsonl",
+      "save_vector_dir": "outputs/metrics/paired_dense_layer_compare_vectors_124931",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl"
+      }
+    },
+    {
+      "name": "paired_dense_layer11_tight_open",
+      "family": "paired_dense",
+      "target_style": "open",
+      "output_path": "outputs/metrics/paired_dense_layer11_tight_124932.jsonl",
+      "save_vector_dir": "outputs/metrics/paired_dense_layer11_tight_vectors_124932",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl"
+      }
+    },
+    {
+      "name": "paired_dense_weighted_9_11_open",
+      "family": "paired_dense",
+      "target_style": "open",
+      "output_path": "outputs/metrics/paired_dense_weighted_9_11_124933.jsonl",
+      "save_vector_dir": "outputs/metrics/paired_dense_weighted_9_11_vectors_124933",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl"
+      }
+    },
+    {
+      "name": "paired_dense_layer11_defensive",
+      "family": "paired_dense",
+      "target_style": "defensive",
+      "output_path": "outputs/metrics/paired_dense_layer11_defensive_125001.jsonl",
+      "save_vector_dir": "outputs/metrics/paired_dense_layer11_defensive_vectors_125001",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl"
+      }
+    }
+  ]
+}

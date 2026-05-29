@@ -1,0 +1,45 @@
+#!/bin/bash
+#SBATCH --job-name={{ job_name }}
+#SBATCH --partition={{ partition }}
+{% if qos %}#SBATCH --qos={{ qos }}{% endif %}
+{% if account %}#SBATCH --account={{ account }}{% endif %}
+#SBATCH --time={{ time }}
+#SBATCH --nodes={{ nodes }}
+{% if ntasks %}#SBATCH --ntasks={{ ntasks }}{% endif %}
+#SBATCH --cpus-per-task={{ cpus_per_task }}
+#SBATCH --mem={{ mem }}
+{% if gres %}#SBATCH --gres={{ gres }}{% elif gpus %}#SBATCH --gres=gpu:{{ gpus }}{% endif %}
+{% if mail_type %}#SBATCH --mail-type={{ mail_type }}{% endif %}
+{% if mail_user %}#SBATCH --mail-user={{ mail_user }}{% endif %}
+
+set -euo pipefail
+
+{% for module in modules %}module load {{ module }}
+{% endfor %}
+
+cd "${SLURM_SUBMIT_DIR:-$PWD}"
+
+{% if env_file %}set -a
+source {{ env_file }}
+set +a
+{% endif %}
+
+{% if venv_activate %}
+if [ ! -d "${ENV_DIR:-}" ]; then
+  echo "Creating venv at ${ENV_DIR}"
+  python -m venv "${ENV_DIR}"
+  source {{ venv_activate }}
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+  pip install -e .
+else
+  source {{ venv_activate }}
+fi
+{% endif %}
+
+export PYTHONPATH="${PWD}/src:${PYTHONPATH:-}"
+
+{% for key, value in env.items() %}export {{ key }}={{ value }}
+{% endfor %}
+
+{{ command }}

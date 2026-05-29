@@ -1,0 +1,10 @@
+{
+  "eval_file": "outputs/steering_eval/prompt_baseline/gemma_cooperation_L23_promptonly.jsonl",
+  "judge_provider": "ionos",
+  "judge_model": "openai/gpt-oss-120b",
+  "reasoning_effort": "high",
+  "axis": "cooperation",
+  "model_path": "google/gemma-4-E4B-it",
+  "n_pairs": 0,
+  "by_variant_alpha": {}
+}

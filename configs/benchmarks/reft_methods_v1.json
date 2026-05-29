@@ -1,0 +1,71 @@
+{
+  "name": "reft_methods_v1",
+  "classifier_train_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200_flat.jsonl",
+  "ranking": {
+    "directional_weight": 1.0,
+    "content_weight": 0.25,
+    "drift_weight": 0.25,
+    "significance_weight": 0.02,
+    "significance_threshold": 0.05
+  },
+  "runs": [
+    {
+      "name": "reft_l11_open",
+      "family": "reft_loreft",
+      "target_style": "open",
+      "notes": "Minimal LoReFT baseline at the current best single layer.",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl",
+        "target_field": "open_response",
+        "model_path": "Qwen/Qwen3-4B",
+        "layers": "11",
+        "rank": 4,
+        "component": "block_output",
+        "train_limit": 128,
+        "eval_limit": 100,
+        "eval_offset": 128,
+        "epochs": 4.0,
+        "batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 0.0005,
+        "max_seq_len": 1024,
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42
+      }
+    },
+    {
+      "name": "reft_l11_defensive",
+      "family": "reft_loreft",
+      "target_style": "defensive",
+      "notes": "Mirrored LoReFT baseline at the current best single layer.",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl",
+        "target_field": "defensive_response",
+        "model_path": "Qwen/Qwen3-4B",
+        "layers": "11",
+        "rank": 4,
+        "component": "block_output",
+        "train_limit": 128,
+        "eval_limit": 100,
+        "eval_offset": 128,
+        "epochs": 4.0,
+        "batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 0.0005,
+        "max_seq_len": 1024,
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42
+      }
+    }
+  ]
+}

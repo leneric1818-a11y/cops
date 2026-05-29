@@ -1,0 +1,163 @@
+{
+  "name": "persona_initiative_v1__gemma_4_e2b",
+  "direction_classifier": {
+    "train_path": "outputs/metrics/persona_pairs_initiative_gpt54mini_1000_flat.jsonl",
+    "positive_label": "explorative",
+    "negative_label": "reactive",
+    "style_field": "style",
+    "response_field": "response",
+    "group_field": "seed_id",
+    "axis_name": "initiative"
+  },
+  "projection_monitor": {
+    "vector_path": "outputs/metrics/layerwise_separability_initiative_gemma_4_e2b_gpt54mini_1000/layer_7_vectors.pt",
+    "model_path": "google/gemma-4-E2B-it",
+    "batch_size": 8
+  },
+  "shared_eval": {
+    "manifest_path": "outputs/metrics/eval_manifests/persona_initiative_gpt54mini_100.jsonl",
+    "eval_limit": 100,
+    "family_params": {
+      "prompt_diff": {
+        "train_group_field": "original_index"
+      },
+      "paired_dense": {
+        "group_field": "seed_record_index"
+      },
+      "reft_loreft": {
+        "group_field": "seed_record_index"
+      }
+    }
+  },
+  "ranking": {
+    "directional_weight": 1.0,
+    "content_weight": 0.25,
+    "drift_weight": 0.25,
+    "significance_weight": 0.02,
+    "significance_threshold": 0.05
+  },
+  "runs": [
+    {
+      "name": "prompt_diff_l10_explorative_chat__gemma_4_e2b",
+      "family": "prompt_diff",
+      "axis_name": "initiative",
+      "target_style": "explorative",
+      "params": {
+        "data_path": "data/processed/ncp_eval.jsonl",
+        "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar explorative Gesprächsinitiative zeigen. Die Antwort darf vorsichtig klärungsorientiert sein und höchstens eine kurze kliententypische Rückfrage enthalten, ohne die Beraterrolle zu übernehmen oder den Gesprächspartner zu interviewen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar reaktiv wirken. Die Antwort soll vor allem auf die letzte Berateraussage reagieren, wenig eigene Gesprächsinitiative zeigen und keine neue Gesprächsrichtung eröffnen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext; weder Chatbot- noch Therapeutenverhalten ist erwünscht.",
+        "layers": "7",
+        "alphas": "1.5",
+        "prompt_format": "chat",
+        "model_path": "google/gemma-4-E2B-it"
+      }
+    },
+    {
+      "name": "prompt_diff_l10_reactive_chat__gemma_4_e2b",
+      "family": "prompt_diff",
+      "axis_name": "initiative",
+      "target_style": "reactive",
+      "params": {
+        "data_path": "data/processed/ncp_eval.jsonl",
+        "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar reaktiv wirken. Die Antwort soll vor allem auf die letzte Berateraussage reagieren, wenig eigene Gesprächsinitiative zeigen und keine neue Gesprächsrichtung eröffnen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar explorative Gesprächsinitiative zeigen. Die Antwort darf vorsichtig klärungsorientiert sein und höchstens eine kurze kliententypische Rückfrage enthalten, ohne die Beraterrolle zu übernehmen oder den Gesprächspartner zu interviewen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext; weder Chatbot- noch Therapeutenverhalten ist erwünscht.",
+        "layers": "7",
+        "alphas": "1.5",
+        "prompt_format": "chat",
+        "model_path": "google/gemma-4-E2B-it"
+      }
+    },
+    {
+      "name": "paired_dense_l10_explorative_chat__gemma_4_e2b",
+      "family": "paired_dense",
+      "axis_name": "initiative",
+      "target_style": "explorative",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_initiative_gpt54mini_1000.jsonl",
+        "positive_field": "explorative_response",
+        "negative_field": "reactive_response",
+        "layers": "7",
+        "alphas": "1.5",
+        "prompt_format": "chat",
+        "model_path": "google/gemma-4-E2B-it"
+      }
+    },
+    {
+      "name": "paired_dense_l10_reactive_chat__gemma_4_e2b",
+      "family": "paired_dense",
+      "axis_name": "initiative",
+      "target_style": "reactive",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_initiative_gpt54mini_1000.jsonl",
+        "positive_field": "reactive_response",
+        "negative_field": "explorative_response",
+        "layers": "7",
+        "alphas": "1.5",
+        "prompt_format": "chat",
+        "model_path": "google/gemma-4-E2B-it"
+      }
+    },
+    {
+      "name": "reft_gentle_l10_explorative_chat__gemma_4_e2b",
+      "family": "reft_loreft",
+      "axis_name": "initiative",
+      "target_style": "explorative",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_initiative_gpt54mini_1000.jsonl",
+        "target_field": "explorative_response",
+        "model_path": "google/gemma-4-E2B-it",
+        "prompt_format": "chat",
+        "layers": "7",
+        "rank": 4,
+        "component": "block_output",
+        "target_mode": "full",
+        "train_limit": 128,
+        "epochs": 1.0,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 0.0001,
+        "max_seq_len": 1024,
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42,
+        "config_id": "loreft_gentle_l10_explorative_chat__gemma_4_e2b"
+      }
+    },
+    {
+      "name": "reft_gentle_l10_reactive_chat__gemma_4_e2b",
+      "family": "reft_loreft",
+      "axis_name": "initiative",
+      "target_style": "reactive",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_initiative_gpt54mini_1000.jsonl",
+        "target_field": "reactive_response",
+        "model_path": "google/gemma-4-E2B-it",
+        "prompt_format": "chat",
+        "layers": "7",
+        "rank": 4,
+        "component": "block_output",
+        "target_mode": "full",
+        "train_limit": 128,
+        "epochs": 1.0,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 0.0001,
+        "max_seq_len": 1024,
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42,
+        "config_id": "loreft_gentle_l10_reactive_chat__gemma_4_e2b"
+      }
+    }
+  ]
+}

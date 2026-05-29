@@ -1,0 +1,161 @@
+{
+  "name": "client_persona_axes_v1",
+  "shared_rules": [
+    "Beide Antworten müssen zur gleichen Person und zur gleichen Situation passen.",
+    "Die beiden Antworten sollen sich primär in der benannten Persona-Achse unterscheiden, nicht in den Fakten des Falls.",
+    "Der Unterschied soll spürbar, aber nicht karikaturenhaft sein.",
+    "Keine übertriebenen \"Therapie-Demo\"-Antworten.",
+    "Keine großen neuen Fakten, Diagnosen, Ortswechsel oder Nebenhandlungen erfinden.",
+    "Natürliches gesprochenes Deutsch, 1 bis 3 Sätze je Antwort.",
+    "Keine Sprecherlabels, keine Aufzählungen, keine Erklärungen, keine Metakommentare."
+  ],
+  "axes": [
+    {
+      "name": "openness",
+      "negative_style": "defensive",
+      "positive_style": "open",
+      "negative_field": "defensive_response",
+      "positive_field": "open_response",
+      "negative_description": "zurückhaltender, selbstschützender, ausweichender oder rechtfertigender",
+      "positive_description": "offener, reflektierter und eher bereit, Gefühle oder Unsicherheit zu benennen",
+      "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar Merkmale eines defensiven Klienten zeigen. Die Antwort soll eher zurückhaltend, selbstschützend, ausweichend oder rechtfertigend wirken, ohne neue Fakten, Ereignisse oder Zeitangaben hinzuzufügen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar Merkmale eines offenen Klienten zeigen. Die Antwort soll Gedanken, Gefühle oder Unsicherheit eher benennen, ohne neue Fakten, Ereignisse oder Zeitangaben hinzuzufügen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am gegebenen Fallkontext und verändere keine bekannten Fakten, Zeitangaben oder Ereignisse.",
+      "positive_extra_rule": "Die offene Antwort darf Gefühle oder Unsicherheit klarer benennen, aber keine neuen konkreten Verhaltensdetails oder Ereignisse hinzufügen.",
+      "research_question": "Kann ich Klientenoffenheit kontrollieren, ohne den Fallinhalt zu verzerren?",
+      "instruction_pairs": [
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll Unsicherheit benennen. Der Klient beschreibt, wie er sich in der Situation innerlich fühlt, ohne eindeutig zu wissen, wie es weitergehen soll. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Unsicherheit ausweichend handhaben. Der Klient vermeidet es, seine Gefühle oder Zweifel offen zu benennen, und versucht stattdessen, die Situation sachlich oder oberflächlich zu beschreiben. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine eigene Schwäche oder einen Fehler offen eingestehen. Der Klient zeigt Selbstreflexion und gibt zu, dass er in der Situation möglicherweise nicht ideal reagiert hat. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Fehler oder eigene Schwächen abwehren oder rechtfertigen. Der Klient versucht, eigenes Fehlverhalten zu relativieren oder auf äußere Umstände zu schieben, ohne einräumen zu müssen, dass er selbst einen Fehler gemacht hat. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll Gefühle direkt ansprechen. Der Klient formuliert klar, wie ihn die Situation emotional berührt, ohne sich dahinter zu verstecken. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Gefühle vermeiden oder herunterspielen. Der Klient spricht sachlich oder rational über die Situation und vermeidet es, emotionale Zustände offen zu thematisieren. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll direkt Wünsche oder Bedürfnisse ausdrücken. Der Klient nennt offen, was er sich von der Situation oder vom Gegenüber erhofft oder braucht. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Wünsche oder Bedürfnisse indirekt oder versteckt ansprechen. Der Klient formuliert eher vage oder überspielt seine eigenen Anliegen, ohne sie klar zu benennen. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine offene Selbstbefragung enthalten. Der Klient stellt sich selbst Fragen zu seinem Verhalten, seinen Motiven oder Gefühlen und zeigt dadurch reflektierte Offenheit. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll selbstkritische Fragen oder Reflexionen vermeiden. Der Klient antwortet eher bestimmt oder ausweichend und zeigt kein Interesse an einer tieferen Selbstbefragung. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        }
+      ]
+    },
+    {
+      "name": "initiative",
+      "negative_style": "reactive",
+      "positive_style": "explorative",
+      "negative_field": "reactive_response",
+      "positive_field": "explorative_response",
+      "negative_description": "eher reaktiv, antwortend und zurückhaltend, ohne selbst viel Gesprächsinitiative zu zeigen",
+      "positive_description": "etwas explorativer und klärungsorientierter, mit vorsichtiger eigener Gesprächsinitiative",
+      "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar reaktiv wirken. Die Antwort soll vor allem auf die letzte Berateraussage reagieren, wenig eigene Gesprächsinitiative zeigen und keine neue Gesprächsrichtung eröffnen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar explorative Gesprächsinitiative zeigen. Die Antwort darf vorsichtig klärungsorientiert sein und höchstens eine kurze kliententypische Rückfrage enthalten, ohne die Beraterrolle zu übernehmen oder den Gesprächspartner zu interviewen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext; weder Chatbot- noch Therapeutenverhalten ist erwünscht.",
+      "positive_extra_rule": "Die explorative Antwort darf höchstens eine kurze, kliententypische Rückfrage enthalten und soll keine Beraterrolle übernehmen oder den Gesprächspartner interviewen.",
+      "negative_extra_rule": "Die reaktive Antwort soll vor allem auf die letzte Berateraussage reagieren und möglichst keine eigene neue Gesprächsrichtung eröffnen.",
+      "research_question": "Kann ich Gesprächsinitiative kontrollieren, ohne Chatbot- oder Therapeutenverhalten zu erzeugen?",
+      "instruction_pairs": [
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine vorsichtige eigene Einschätzung oder Vermutung enthalten. Der Klient zeigt damit etwas mehr Eigeninitiative, ohne sicher zu sein oder zu dramatisieren. Er bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll vor allem auf Hinweise oder Fragen des Gesprächspartners reagieren, dabei neutral bleiben und keine eigenen Vermutungen oder Einschätzungen einbringen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine kurze, vorsichtige Rückfrage enthalten, die zeigt, dass der Klient an einer genaueren Klärung interessiert ist, ohne die Führung zu übernehmen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll ohne Rückfragen auskommen und stattdessen nur auf die vorangegangene Äußerung eingehen, ohne aktiv weitere Informationen zu erbitten. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll einen vorsichtigen, eigenen Wunsch oder eine kleine Bitte formulieren, die zeigt, dass der Klient sich mit seiner Situation auseinandersetzt, aber nicht aufdringlich wirkt. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll keine eigenen Wünsche oder Bitten enthalten, sondern sich auf die Reaktion auf das Gesagte beschränken, ohne Initiative zu zeigen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll ein mildes Ausdrücken von Zweifeln oder Unsicherheiten in Bezug auf die eigene Situation umfassen, um Klärung anzuregen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Unsicherheiten eher vermeiden und stattdessen möglichst sachlich auf die vorausgegangene Gesprächsbeiträge reagieren, ohne weiterführende Klärung anzustoßen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll einen Versuch enthalten, eine Verbindung zwischen verschiedenen Informationen herzustellen oder einen Gedanken weiterzuverfolgen, um sie vertieft zu verstehen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll sich auf einzelne Aussagen konzentrieren und darauf beschränkt bleiben, ohne selbst Verbindungen herzustellen oder Gedanken weiterzudenken. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung."
+        }
+      ]
+    },
+    {
+      "name": "cooperation",
+      "negative_style": "resistant",
+      "positive_style": "cooperative",
+      "negative_field": "resistant_response",
+      "positive_field": "cooperative_response",
+      "negative_description": "skeptischer, widerständiger oder weniger bereit, auf Vorschläge einzugehen",
+      "positive_description": "kooperativer, mitarbeitender und eher bereit, Vorschläge ernsthaft zu erwägen",
+      "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar widerständiger wirken. Die Antwort darf Zweifel, Distanz oder Abwehr zeigen, soll aber nicht aggressiv werden und keine neuen Fakten oder Ereignisse erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar kooperativer wirken. Die Antwort darf Bereitschaft, Mitgehen oder ernsthaftes Erwägen eines Vorschlags zeigen, ohne neue Maßnahmen, Ereignisse oder Fakten zu erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext und ändere keine bekannten Fakten, Zeitangaben oder Ereignisse.",
+      "positive_extra_rule": "Die kooperative Antwort darf Bereitschaft oder Mitgehen ausdrücken, aber keine neuen Maßnahmen oder Ereignisse erfinden.",
+      "negative_extra_rule": "Die widerständige Antwort soll nicht aggressiv werden, sondern eher Zweifel, Abwehr oder Distanz zeigen.",
+      "research_question": "Kann ich Kooperationsbereitschaft von allgemeiner Offenheit trennen?",
+      "instruction_pairs": [
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine Bereitschaft zeigen, Vorschläge aufzunehmen und ernsthaft darüber nachzudenken, ohne sofort abzulehnen. Der Klient akzeptiert zumindest vorläufig die vorgeschlagene Idee und signalisiert Offenheit, sie auszuprobieren.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll deutlich machen, dass der Klient Vorschläge kritisch hinterfragt und eher geneigt ist, sie abzulehnen oder zu relativieren, ohne ihnen offen zu begegnen. Der Klient zeigt Skepsis oder Widerstand gegenüber dem Vorgehen."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll einen kooperativen Umgang mit Rückfragen zeigen, das heißt, der Klient beantwortet Fragen offen und ohne Ausweichmanöver, um den Beratungsprozess zu unterstützen.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Vermeidung oder Ausweichen bei Rückfragen zeigen, etwa durch Abwenden vom Thema, vage Antworten oder das Abblocken weiterer Nachfragen, ohne inhaltliche Klarheit zu bieten."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll einen konstruktiven Vorschlag oder Kompromissbereitschaft enthalten, also eine aktive Mitgestaltung des Gesprächs signalisieren, ohne nur passiv mitzuspielen.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll deutlich machen, dass der Klient wenig Interesse hat, sich auf Vorschläge einzulassen oder gemeinsam Lösungsmöglichkeiten zu entwickeln, sondern eher bei seiner eigenen Position bleibt."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eigene Unsicherheiten oder Schwierigkeiten offen benennen, um den Beratungsprozess zu fördern, ohne Schuldzuweisungen oder Abwehr.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Schwierigkeiten oder Probleme entweder verneinen, bagatellisieren oder auf äußere Umstände schieben, um eigene Anteile an der Problematik nicht anzuerkennen."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine klare und nachvollziehbare Zustimmung zu einem konkreten nächsten Schritt zeigen, der im Gespräch vorgeschlagen wurde, und so Mitwirken signalisieren.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll eine klare Ablehnung oder Zweifel an einem vorgeschlagenen nächsten Schritt ausdrücken, ohne offene Ablehnung zu karikieren, sondern realistisch skeptisch bleiben."
+        }
+      ]
+    },
+    {
+      "name": "hopefulness",
+      "negative_style": "resigned",
+      "positive_style": "hopeful",
+      "negative_field": "resigned_response",
+      "positive_field": "hopeful_response",
+      "negative_description": "resignierter, entmutigter oder hoffnungsloser",
+      "positive_description": "hoffnungsvoller, zuversichtlicher und eher bereit, eine Möglichkeit zur Veränderung zu sehen",
+      "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar resignierter wirken. Die Antwort darf Niedergeschlagenheit, Zweifel oder Entmutigung zeigen, ohne neue Katastrophenszenarien, Ereignisse oder Fakten zu erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar hoffnungsvoller wirken. Die Antwort darf vorsichtige Zuversicht oder die Bereitschaft zu Veränderung zeigen, ohne unrealistische Lösungen, neue Ereignisse oder Fakten hinzuzufügen. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+      "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext; keine neuen Fakten, Zeitangaben oder Ereignisse.",
+      "positive_extra_rule": "Die hoffnungsvolle Antwort darf vorsichtige Zuversicht ausdrücken, aber keine unrealistischen Lösungen oder neuen Fakten hinzufügen.",
+      "negative_extra_rule": "Die resignierte Antwort soll Niedergeschlagenheit oder Zweifel zeigen, ohne neue Katastrophenszenarien zu erfinden.",
+      "research_question": "Kann ich Hoffnungslosigkeit versus vorsichtige Zuversicht kontrollieren, ohne nur Sentiment zu verändern?",
+      "instruction_pairs": [
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll vorsichtig mögliche positive Entwicklungen ansprechen. Der Klient formuliert eine vorsichtige Erwartung oder Hoffnung, dass sich etwas zum Besseren wenden könnte, bleibt aber realistisch und zurückhaltend.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll eine resignierte Haltung zu möglichen Veränderungen zeigen. Der Klient drückt aus, dass er kaum noch an eine Verbesserung glaubt und eher davon ausgeht, dass sich nichts ändert."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine aktive Suche nach Lösungen oder Handlungsmöglichkeiten vermitteln. Der Klient bringt zum Ausdruck, dass er offen ist, über Wege nachzudenken, auch wenn die Situation schwierig ist.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll deutlich machen, dass der Klient sich handlungsunfähig oder überfordert fühlt und keine Anstrengung mehr sieht, die Situation zu verändern."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll vorsichtig positive Selbstwirksamkeit signalisieren. Der Klient zeigt, dass er glaubt, zumindest teilweise Einfluss auf die Situation nehmen zu können, auch wenn es schwer ist.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll einen Mangel an Selbstwirksamkeit ausdrücken. Der Klient fühlt sich machtlos gegenüber der Situation und zweifelt daran, selbst etwas bewirken zu können."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll sich empathisch und wohlwollend selbst gegenüber sein. Der Klient spricht sich behutsam und verständnisvoll an, trotz aller Schwierigkeiten.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll kritische oder selbstzweifelnde Töne enthalten. Der Klient drückt Frustration oder Ärger über sich selbst aus und gibt sich wenig Nachsicht."
+        },
+        {
+          "pos": "Ziel: Die nächste Klientenäußerung soll eine gewisse Neugier oder Offenheit gegenüber fremden Sichtweisen oder Veränderungsangeboten zeigen. Der Klient signalisiert, dass er bereit ist, neue Perspektiven in Betracht zu ziehen.",
+          "neg": "Ziel: Die nächste Klientenäußerung soll Widerstand oder Ablehnung gegenüber Veränderungen ausdrücken. Der Klient zeigt sich verschlossen oder skeptisch gegenüber neuen Ansätzen oder Vorschlägen."
+        }
+      ]
+    }
+  ]
+}

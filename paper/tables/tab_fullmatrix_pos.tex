@@ -1,0 +1,29 @@
+% auto-generated
+\begin{table*}[t]\centering\small
+\begin{tabular}{ll c c r r}
+\toprule
+\textbf{Model} & \textbf{Axis} & \textbf{L} & \textbf{Best variant} & \textbf{\netpw} & \textbf{$\kappa$} \\
+\midrule
+Qwen3-4B & openness & L15 & \texttt{persona\_matched} & $+0.323$ & $0.52$ \\
+Qwen3-4B & initiative & L9 & \texttt{persona\_mismatched} & $+0.050$ & $0.40$ \\
+Qwen3-4B & cooperation & L20 & \texttt{case\_blind} & $+0.340$ & $0.47$ \\
+Qwen3-4B & hopefulness & L18 & \texttt{case\_blind} & $+0.225$ & $0.52$ \\
+\midrule
+Gemma-4-E4B-it & initiative & L13 & \texttt{persona\_mismatched} & $+0.300$ & $0.47$ \\
+Gemma-4-E4B-it & cooperation & L23 & \texttt{persona\_mismatched} & $+0.420$ & $0.46$ \\
+Gemma-4-E4B-it & hopefulness & L25 & \texttt{case\_blind} & $+0.380$ & $0.55$ \\
+\midrule
+Qwen3.5-9B & openness & L20 & \texttt{case\_blind} & $+0.410$ & $0.36$ \\
+Qwen3.5-9B & initiative & L20 & \texttt{case\_aware} & $+0.455$ & $0.17$ \\
+Qwen3.5-9B & cooperation & L15 & \texttt{case\_blind} & $+0.235$ & $0.33$ \\
+Qwen3.5-9B & hopefulness & L15 & \texttt{persona\_mismatched} & $+0.345$ & $0.50$ \\
+\midrule
+Mistral-7B & openness & L15 & \texttt{persona\_mismatched} & $+0.460$ & $0.45$ \\
+Mistral-7B & initiative & L5 & \texttt{case\_aware} & $+0.025$ & $0.39$ \\
+Mistral-7B & cooperation & L15 & \texttt{case\_blind} & $+0.115$ & $0.34$ \\
+Mistral-7B & hopefulness & L20 & \texttt{case\_blind} & $+0.040$ & $0.47$ \\
+\bottomrule
+\end{tabular}
+\caption{\emph{Oracle / upper bound.} Full-matrix evaluation at $\alphapos$: per (model, axis) the best of the four variants by $\netpw$. Cell-mean lift over prespecified CA (Table~\ref{tab:fullmatrix-pos-headline}) is $+0.070$. $N=200$ held-out contexts per stem ($N=600$ for Qwen3-4B \emph{openness} via 3 random seeds).}
+\label{tab:fullmatrix-pos-oracle}
+\end{table*}

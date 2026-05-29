@@ -1,0 +1,16 @@
+cluster_name: cluster_b
+slurm:
+  partition: gpu-long
+  qos: long
+  account: your_account
+  time: "72:00:00"
+  nodes: 1
+  gpus: 4
+  cpus_per_task: 16
+  mem: 128G
+  modules:
+    - cuda/12.1
+    - python/3.10
+  env:
+    HF_HOME: /scratch/$USER/hf
+    WANDB_MODE: offline

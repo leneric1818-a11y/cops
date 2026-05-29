@@ -1,0 +1,38 @@
+experiment_name: cat_pipeline_swda
+pipeline: category_transition_llm
+
+dataset:
+  name: swda
+  path: data/processed/swda.jsonl
+
+category_predictor:
+  model_dir: outputs/checkpoints/category_predictor_swda
+  max_length: 256
+  top_k: 5
+  use_last_utterance: true
+  use_history_label: false
+
+transition_matrix:
+  path: outputs/metrics/transition_matrix.csv
+
+llm:
+  base_model: meta-llama/Meta-Llama-3-8B
+  prompt_template: templates/cat_conditioned_prompt.txt
+  use_unsloth: true
+  load_in_4bit: true
+  max_seq_len: 2048
+  generation:
+    max_new_tokens: 128
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 50
+    do_sample: true
+    repetition_penalty: 1.05
+
+output_dir: outputs/checkpoints/cat_pipeline_swda
+output_path: outputs/metrics/category_chain_outputs.jsonl
+
+slurm:
+  cluster: cluster_b
+  template: slurm/templates/cluster_b.sh.j2
+  command: python -m scripts.run_experiment --config configs/experiments/cat_pipeline.yaml

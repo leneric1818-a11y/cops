@@ -1,0 +1,587 @@
+{
+  "coverage": {
+    "RaterB": 111,
+    "RaterD": 123,
+    "RaterA": 124,
+    "RaterC": 124
+  },
+  "dropped_raters": {},
+  "fleiss": {
+    "fleiss_humans": 0.38079043039756066,
+    "fleiss_humans_plus_judges": 0.4065193670001793,
+    "fleiss_judges": 0.6336692979983081,
+    "n_common": 110
+  },
+  "fleiss_per_axis": {
+    "cooperation": {
+      "fleiss_humans": 0.37204933431348525,
+      "fleiss_judges": 0.6845930232558137,
+      "n": 31
+    },
+    "hopefulness": {
+      "fleiss_humans": 0.4033547225036587,
+      "fleiss_judges": 0.45150115473441116,
+      "n": 25
+    },
+    "initiative": {
+      "fleiss_humans": 0.4412043010752688,
+      "fleiss_judges": 0.604705882352941,
+      "n": 28
+    },
+    "openness": {
+      "fleiss_humans": 0.20387596899224797,
+      "fleiss_judges": 0.6456846203763787,
+      "n": 26
+    }
+  },
+  "fleiss_per_stratum": {
+    "easy": {
+      "fleiss_humans": 0.505697881145988,
+      "fleiss_judges": 1.0,
+      "n": 53
+    },
+    "near_tie": {
+      "fleiss_humans": 0.1629844528751023,
+      "fleiss_judges": -0.03186046511627901,
+      "n": 29
+    },
+    "stress": {
+      "fleiss_humans": 0.3067590987868285,
+      "fleiss_judges": 0.7136363636363633,
+      "n": 28
+    }
+  },
+  "human_majority_vs_ensemble": {
+    "agreement_overall": 0.6090909090909091,
+    "by_axis": {
+      "cooperation": {
+        "agreement": 0.7096774193548387,
+        "kappa": 0.38546255506607946,
+        "n": 31
+      },
+      "hopefulness": {
+        "agreement": 0.52,
+        "kappa": 0.2307692307692308,
+        "n": 25
+      },
+      "initiative": {
+        "agreement": 0.6428571428571429,
+        "kappa": 0.36651583710407243,
+        "n": 28
+      },
+      "openness": {
+        "agreement": 0.5384615384615384,
+        "kappa": 0.3066666666666666,
+        "n": 26
+      }
+    },
+    "by_axis_pole": {
+      "cooperation/negative": {
+        "agreement": 0.6875,
+        "kappa": -0.1267605633802817,
+        "n": 16
+      },
+      "cooperation/positive": {
+        "agreement": 0.7333333333333333,
+        "kappa": 0.5419847328244274,
+        "n": 15
+      },
+      "hopefulness/negative": {
+        "agreement": 0.4,
+        "kappa": 0.0,
+        "n": 10
+      },
+      "hopefulness/positive": {
+        "agreement": 0.6,
+        "kappa": 0.37062937062937057,
+        "n": 15
+      },
+      "initiative/negative": {
+        "agreement": 0.6428571428571429,
+        "kappa": 0.3965517241379312,
+        "n": 14
+      },
+      "initiative/positive": {
+        "agreement": 0.6428571428571429,
+        "kappa": 0.339622641509434,
+        "n": 14
+      },
+      "openness/negative": {
+        "agreement": 0.5714285714285714,
+        "kappa": 0.26956521739130435,
+        "n": 14
+      },
+      "openness/positive": {
+        "agreement": 0.5,
+        "kappa": 0.2,
+        "n": 12
+      }
+    },
+    "by_stratum": {
+      "easy": {
+        "agreement": 0.8867924528301887,
+        "kappa": 0.7769985974754559,
+        "n": 53
+      },
+      "near_tie": {
+        "agreement": 0.2413793103448276,
+        "kappa": -0.0813559322033898,
+        "n": 29
+      },
+      "stress": {
+        "agreement": 0.4642857142857143,
+        "kappa": 0.16666666666666669,
+        "n": 28
+      }
+    },
+    "kappa_overall": 0.3580347448425625,
+    "n": 110
+  },
+  "human_majority_win_rates": {
+    "by_axis": {
+      "cooperation": {
+        "base": 7,
+        "n": 31,
+        "pct_base": 22.6,
+        "pct_steered": 67.7,
+        "pct_tie": 9.7,
+        "steered": 21,
+        "tie": 3
+      },
+      "hopefulness": {
+        "base": 6,
+        "n": 25,
+        "pct_base": 24.0,
+        "pct_steered": 48.0,
+        "pct_tie": 28.0,
+        "steered": 12,
+        "tie": 7
+      },
+      "initiative": {
+        "base": 14,
+        "n": 28,
+        "pct_base": 50.0,
+        "pct_steered": 32.1,
+        "pct_tie": 17.9,
+        "steered": 9,
+        "tie": 5
+      },
+      "openness": {
+        "base": 8,
+        "n": 26,
+        "pct_base": 30.8,
+        "pct_steered": 38.5,
+        "pct_tie": 30.8,
+        "steered": 10,
+        "tie": 8
+      }
+    },
+    "by_stratum": {
+      "easy": {
+        "base": 18,
+        "n": 53,
+        "pct_base": 34.0,
+        "pct_steered": 58.5,
+        "pct_tie": 7.5,
+        "steered": 31,
+        "tie": 4
+      },
+      "near_tie": {
+        "base": 7,
+        "n": 29,
+        "pct_base": 24.1,
+        "pct_steered": 37.9,
+        "pct_tie": 37.9,
+        "steered": 11,
+        "tie": 11
+      },
+      "stress": {
+        "base": 10,
+        "n": 28,
+        "pct_base": 35.7,
+        "pct_steered": 35.7,
+        "pct_tie": 28.6,
+        "steered": 10,
+        "tie": 8
+      }
+    },
+    "overall": {
+      "base": 35,
+      "n": 110,
+      "pct_base": 31.8,
+      "pct_steered": 47.3,
+      "pct_tie": 20.9,
+      "steered": 52,
+      "tie": 23
+    }
+  },
+  "inter_human_pairwise": {
+    "RaterB vs RaterD": {
+      "agreement": 0.6909090909090909,
+      "kappa": 0.49785177228786254,
+      "n": 110
+    },
+    "RaterB vs RaterC": {
+      "agreement": 0.6216216216216216,
+      "kappa": 0.4076991487739804,
+      "n": 111
+    },
+    "RaterD vs RaterC": {
+      "agreement": 0.5365853658536586,
+      "kappa": 0.28706528370957907,
+      "n": 123
+    },
+    "RaterA vs RaterB": {
+      "agreement": 0.6846846846846847,
+      "kappa": 0.4511936714225173,
+      "n": 111
+    },
+    "RaterA vs RaterD": {
+      "agreement": 0.5853658536585366,
+      "kappa": 0.31621975147154996,
+      "n": 123
+    },
+    "RaterA vs RaterC": {
+      "agreement": 0.5725806451612904,
+      "kappa": 0.33123028391167203,
+      "n": 124
+    }
+  },
+  "n_sample_items": 124,
+  "per_rater_per_axis": {
+    "RaterB": {
+      "cooperation": {
+        "agreement": 0.7419354838709677,
+        "kappa": 0.45851528384279483,
+        "n": 31
+      },
+      "hopefulness": {
+        "agreement": 0.5384615384615384,
+        "kappa": 0.19170984455958556,
+        "n": 26
+      },
+      "initiative": {
+        "agreement": 0.6428571428571429,
+        "kappa": 0.3548387096774194,
+        "n": 28
+      },
+      "openness": {
+        "agreement": 0.6923076923076923,
+        "kappa": 0.43169398907103823,
+        "n": 26
+      }
+    },
+    "RaterD": {
+      "cooperation": {
+        "agreement": 0.625,
+        "kappa": 0.3118279569892473,
+        "n": 32
+      },
+      "hopefulness": {
+        "agreement": 0.6774193548387096,
+        "kappa": 0.3762575452716297,
+        "n": 31
+      },
+      "initiative": {
+        "agreement": 0.5,
+        "kappa": 0.18471337579617833,
+        "n": 32
+      },
+      "openness": {
+        "agreement": 0.4642857142857143,
+        "kappa": 0.2321755027422304,
+        "n": 28
+      }
+    },
+    "RaterA": {
+      "cooperation": {
+        "agreement": 0.625,
+        "kappa": 0.21149897330595482,
+        "n": 32
+      },
+      "hopefulness": {
+        "agreement": 0.8125,
+        "kappa": 0.6033057851239669,
+        "n": 32
+      },
+      "initiative": {
+        "agreement": 0.8125,
+        "kappa": 0.6335877862595419,
+        "n": 32
+      },
+      "openness": {
+        "agreement": 0.5714285714285714,
+        "kappa": 0.28964059196617326,
+        "n": 28
+      }
+    },
+    "RaterC": {
+      "cooperation": {
+        "agreement": 0.75,
+        "kappa": 0.49105367793240556,
+        "n": 32
+      },
+      "hopefulness": {
+        "agreement": 0.4375,
+        "kappa": 0.102803738317757,
+        "n": 32
+      },
+      "initiative": {
+        "agreement": 0.59375,
+        "kappa": 0.35403726708074534,
+        "n": 32
+      },
+      "openness": {
+        "agreement": 0.4642857142857143,
+        "kappa": 0.18128654970760244,
+        "n": 28
+      }
+    }
+  },
+  "per_rater_per_nagree": {
+    "RaterB": {
+      "1": {
+        "agreement": 0.0,
+        "kappa": NaN,
+        "n": 1
+      },
+      "2": {
+        "agreement": 0.3870967741935484,
+        "kappa": 0.0,
+        "n": 31
+      },
+      "3": {
+        "agreement": 0.7721518987341772,
+        "kappa": 0.5737410071942447,
+        "n": 79
+      }
+    },
+    "RaterD": {
+      "1": {
+        "agreement": 1.0,
+        "kappa": NaN,
+        "n": 1
+      },
+      "2": {
+        "agreement": 0.30303030303030304,
+        "kappa": -0.04545454545454541,
+        "n": 33
+      },
+      "3": {
+        "agreement": 0.6629213483146067,
+        "kappa": 0.39959523274117376,
+        "n": 89
+      }
+    },
+    "RaterA": {
+      "1": {
+        "agreement": 0.0,
+        "kappa": NaN,
+        "n": 1
+      },
+      "2": {
+        "agreement": 0.5588235294117647,
+        "kappa": 0.1853035143769968,
+        "n": 34
+      },
+      "3": {
+        "agreement": 0.7752808988764045,
+        "kappa": 0.5766944114149821,
+        "n": 89
+      }
+    },
+    "RaterC": {
+      "1": {
+        "agreement": 0.0,
+        "kappa": NaN,
+        "n": 1
+      },
+      "2": {
+        "agreement": 0.3235294117647059,
+        "kappa": 0.05669481302774428,
+        "n": 34
+      },
+      "3": {
+        "agreement": 0.6629213483146067,
+        "kappa": 0.4317939987231325,
+        "n": 89
+      }
+    }
+  },
+  "per_rater_per_stratum": {
+    "RaterB": {
+      "easy": {
+        "agreement": 0.8679245283018868,
+        "kappa": 0.7257945306725795,
+        "n": 53
+      },
+      "near_tie": {
+        "agreement": 0.36666666666666664,
+        "kappa": 0.049999999999999906,
+        "n": 30
+      },
+      "stress": {
+        "agreement": 0.5714285714285714,
+        "kappa": 0.22222222222222218,
+        "n": 28
+      }
+    },
+    "RaterD": {
+      "easy": {
+        "agreement": 0.7580645161290323,
+        "kappa": 0.5084566596194503,
+        "n": 62
+      },
+      "near_tie": {
+        "agreement": 0.3,
+        "kappa": 0.033742331288343544,
+        "n": 30
+      },
+      "stress": {
+        "agreement": 0.45161290322580644,
+        "kappa": 0.10979729729729733,
+        "n": 31
+      }
+    },
+    "RaterA": {
+      "easy": {
+        "agreement": 0.8225806451612904,
+        "kappa": 0.6293478260869565,
+        "n": 62
+      },
+      "near_tie": {
+        "agreement": 0.5483870967741935,
+        "kappa": 0.2478336221837088,
+        "n": 31
+      },
+      "stress": {
+        "agreement": 0.6451612903225806,
+        "kappa": 0.3566037735849056,
+        "n": 31
+      }
+    },
+    "RaterC": {
+      "easy": {
+        "agreement": 0.7580645161290323,
+        "kappa": 0.5472249269717624,
+        "n": 62
+      },
+      "near_tie": {
+        "agreement": 0.3548387096774194,
+        "kappa": 0.1027496382054993,
+        "n": 31
+      },
+      "stress": {
+        "agreement": 0.3870967741935484,
+        "kappa": 0.1222056631892697,
+        "n": 31
+      }
+    }
+  },
+  "per_rater_vs_each_judge": {
+    "RaterB": {
+      "GPT-OSS": {
+        "agreement": 0.6576576576576577,
+        "kappa": 0.393006187940711,
+        "n": 111
+      },
+      "Mistral": {
+        "agreement": 0.6666666666666666,
+        "kappa": 0.40035041611914146,
+        "n": 111
+      },
+      "Nano": {
+        "agreement": 0.6486486486486487,
+        "kappa": 0.3793548387096775,
+        "n": 111
+      },
+      "n": 111
+    },
+    "RaterD": {
+      "GPT-OSS": {
+        "agreement": 0.6341463414634146,
+        "kappa": 0.3910891089108911,
+        "n": 123
+      },
+      "Mistral": {
+        "agreement": 0.5284552845528455,
+        "kappa": 0.2057448229792919,
+        "n": 123
+      },
+      "Nano": {
+        "agreement": 0.5447154471544715,
+        "kappa": 0.25839793281653733,
+        "n": 123
+      },
+      "n": 123
+    },
+    "RaterA": {
+      "GPT-OSS": {
+        "agreement": 0.6451612903225806,
+        "kappa": 0.3474464776940558,
+        "n": 124
+      },
+      "Mistral": {
+        "agreement": 0.717741935483871,
+        "kappa": 0.46898323748929405,
+        "n": 124
+      },
+      "Nano": {
+        "agreement": 0.7096774193548387,
+        "kappa": 0.46749373732553984,
+        "n": 124
+      },
+      "n": 124
+    },
+    "RaterC": {
+      "GPT-OSS": {
+        "agreement": 0.5725806451612904,
+        "kappa": 0.32877132060055164,
+        "n": 124
+      },
+      "Mistral": {
+        "agreement": 0.5645161290322581,
+        "kappa": 0.312384473197782,
+        "n": 124
+      },
+      "Nano": {
+        "agreement": 0.5483870967741935,
+        "kappa": 0.29323155216284985,
+        "n": 124
+      },
+      "n": 124
+    }
+  },
+  "per_rater_vs_ensemble": {
+    "RaterB": {
+      "agreement_vs_ensemble": 0.6576576576576577,
+      "kappa_vs_ensemble": 0.3953555045871561,
+      "n": 111,
+      "pearson_r_vs_delta_aa": 0.5907900054542824
+    },
+    "RaterD": {
+      "agreement_vs_ensemble": 0.5691056910569106,
+      "kappa_vs_ensemble": 0.2917209908735332,
+      "n": 123,
+      "pearson_r_vs_delta_aa": 0.488786417239589
+    },
+    "RaterA": {
+      "agreement_vs_ensemble": 0.7096774193548387,
+      "kappa_vs_ensemble": 0.46679407548972773,
+      "n": 124,
+      "pearson_r_vs_delta_aa": 0.5519385081969886
+    },
+    "RaterC": {
+      "agreement_vs_ensemble": 0.5645161290322581,
+      "kappa_vs_ensemble": 0.31729200652528555,
+      "n": 124,
+      "pearson_r_vs_delta_aa": 0.5007271310763498
+    }
+  },
+  "primary_raters": [
+    "RaterA",
+    "RaterB",
+    "RaterD",
+    "RaterC"
+  ]
+}

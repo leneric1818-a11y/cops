@@ -1,0 +1,6 @@
+name: swda
+raw_path: data/raw/swda
+processed_path: data/processed/swda.jsonl
+speaker_labels:
+  counselor: B
+  client: K

@@ -1,0 +1,46 @@
+{
+  "eval_stem": "gemma_hopefulness_L5",
+  "providers": [
+    {
+      "provider": "cluster_mistral",
+      "model": "mistralai/Magistral-Small-2509",
+      "effort": null
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-nano",
+      "effort": "high"
+    },
+    {
+      "provider": "ionos",
+      "model": "openai/gpt-oss-120b",
+      "effort": "high"
+    }
+  ],
+  "n_ensembled_rows": 50,
+  "inter_rater_agreement": {
+    "pairwise_cohen_kappa": {
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__openai:gpt-5.4-nano@high": 0.7482693517935809,
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__ionos:openai/gpt-oss-120b@high": 0.8104864181933038,
+      "openai:gpt-5.4-nano@high__vs__ionos:openai/gpt-oss-120b@high": 0.6803069053708442
+    },
+    "fleiss_kappa": 0.7463717063547978
+  },
+  "by_variant_alpha": {
+    "global_blind__a1.5": {
+      "n": 50,
+      "pairwise_steered_win_rate": 0.32,
+      "pairwise_tie_rate": 0.48,
+      "pairwise_base_win_rate": 0.2,
+      "pairwise_net_overall": 0.12,
+      "axis_alignment_delta_mean": -0.04000000000000003,
+      "axis_alignment_pairwise_net": 0.0,
+      "case_fidelity_delta_mean": -0.01999999999999999,
+      "case_fidelity_pairwise_net": 0.06,
+      "client_role_fidelity_delta_mean": -0.00666666666666667,
+      "client_role_fidelity_pairwise_net": 0.02,
+      "training_utility_delta_mean": -0.03999999999999997,
+      "training_utility_pairwise_net": 0.04
+    }
+  }
+}

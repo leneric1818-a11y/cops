@@ -1,0 +1,32 @@
+% auto-generated
+\begin{table*}[t]\centering\small
+\begin{tabular}{l c rrrr r}
+\toprule
+\textbf{Variant} & $\alpha$ & $\Delta$\textbf{axis} & $\Delta$\textbf{case} & $\Delta$\textbf{role} & $\Delta$\textbf{util} & \textbf{\netpw} \\
+\midrule
+\multicolumn{7}{l}{\textit{Negative-$\alpha$ (operational direction: defensive / reactive / resistant / resigned)}} \\
+\midrule
+\texttt{case\_blind} & $-1.5$ & $+0.259$ & $-0.001$ & $+0.028$ & $+0.195$ & $+0.129$ \\
+\texttt{case\_blind} & $-3.0$ & $+0.577$ & $-0.052$ & $+0.029$ & $+0.405$ & $+0.234$ \\
+\texttt{case\_aware} & $-1.5$ & $+0.297$ & $+0.009$ & $+0.034$ & $+0.228$ & $+0.156$ \\
+\texttt{case\_aware} & $-3.0$ & $+0.661$ & $+0.038$ & $+0.087$ & $+0.509$ & $+0.309$ \\
+\texttt{persona\_matched} & $-1.5$ & $+0.311$ & $+0.015$ & $+0.038$ & $+0.239$ & $+0.150$ \\
+\texttt{persona\_matched} & $-3.0$ & $+0.656$ & $+0.018$ & $+0.070$ & $+0.490$ & $+0.303$ \\
+\texttt{persona\_mismatched} & $-1.5$ & $+0.310$ & $+0.023$ & $+0.042$ & $+0.249$ & $+0.154$ \\
+\texttt{persona\_mismatched} & $-3.0$ & $+0.659$ & $+0.043$ & $+0.082$ & $+0.499$ & $+0.330$ \\
+\midrule
+\multicolumn{7}{l}{\textit{Positive-$\alpha$ (symmetric control: open / proactive / cooperative / hopeful)}} \\
+\midrule
+\texttt{case\_blind} & $+1.5$ & $+0.222$ & $+0.081$ & $+0.015$ & $+0.201$ & $+0.159$ \\
+\texttt{case\_blind} & $+3.0$ & $+0.380$ & $+0.094$ & $+0.017$ & $+0.309$ & $+0.195$ \\
+\texttt{case\_aware} & $+1.5$ & $+0.205$ & $+0.042$ & $+0.005$ & $+0.167$ & $+0.121$ \\
+\texttt{case\_aware} & $+3.0$ & $+0.371$ & $+0.064$ & $+0.001$ & $+0.290$ & $+0.206$ \\
+\texttt{persona\_matched} & $+1.5$ & $+0.182$ & $+0.019$ & $-0.005$ & $+0.151$ & $+0.112$ \\
+\texttt{persona\_matched} & $+3.0$ & $+0.372$ & $+0.042$ & $-0.006$ & $+0.276$ & $+0.195$ \\
+\texttt{persona\_mismatched} & $+1.5$ & $+0.232$ & $+0.049$ & $+0.017$ & $+0.191$ & $+0.142$ \\
+\texttt{persona\_mismatched} & $+3.0$ & $+0.390$ & $+0.080$ & $+0.004$ & $+0.312$ & $+0.226$ \\
+\bottomrule
+\end{tabular}
+\caption{Mean per-dimension judge-score deltas (steered $-$ baseline, 1--5 Likert) and overall net-pairwise preference, averaged across all (model, axis) cells in the full-matrix evaluation (16 cells per $\alpha$ block; Qwen3-4B \emph{openness} averaged over 3 seeds before pooling). $\Delta$axis is the targeted axis-alignment effect; $\Delta$case (fidelity to the case narrative), $\Delta$role (client-role plausibility), and $\Delta$util (training-data usefulness) are the case-preservation diagnostics. In aggregate, $\Delta$axis and $\Delta$util are consistently positive at every $(\text{variant}, \alpha)$ while $\Delta$case and $\Delta$role remain within $[-0.052, +0.094]$ on the mean. Per-cell outliers where $\Delta$case or $\Delta$role drops below $-0.10$ are listed in Appendix~\ref{tab:fidelity-outliers}; they concentrate on specific (model, axis) combinations rather than spreading uniformly.}
+\label{tab:fidelity-deltas}
+\end{table*}

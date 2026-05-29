@@ -1,0 +1,74 @@
+{
+  "name": "alignment_sweep_v1",
+  "description": "Sweep LoReFT rank x trait x layer for the LoReFT-vs-persona-vector alignment experiment (see .claude/plans/rippling-pondering-key.md).",
+  "shared": {
+    "model_path": "Qwen/Qwen3-4B",
+    "prompt_format": "chat",
+    "component": "block_output",
+    "target_mode": "full",
+    "train_limit": 128,
+    "eval_limit": 100,
+    "eval_offset": 128,
+    "epochs": 4.0,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0005,
+    "max_seq_len": 1024,
+    "max_new_tokens": 96,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repetition_penalty": 1.05,
+    "do_sample": true,
+    "seed": 42
+  },
+  "traits": [
+    {
+      "trait": "openness",
+      "positive_style": "open",
+      "negative_style": "defensive",
+      "target_field_positive": "open_response",
+      "target_field_negative": "defensive_response",
+      "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl",
+      "persona_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200_flat.jsonl"
+    },
+    {
+      "trait": "hopefulness",
+      "positive_style": "hopeful",
+      "negative_style": "resigned",
+      "target_field_positive": "hopeful_response",
+      "target_field_negative": "resigned_response",
+      "pair_data_path": "outputs/metrics/persona_pairs_hopefulness_gpt54mini_1000.jsonl",
+      "persona_data_path": "outputs/metrics/persona_pairs_hopefulness_gpt54mini_1000_flat.jsonl"
+    },
+    {
+      "trait": "cooperation",
+      "positive_style": "cooperative",
+      "negative_style": "uncooperative",
+      "target_field_positive": "cooperative_response",
+      "target_field_negative": "uncooperative_response",
+      "pair_data_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_200.jsonl",
+      "persona_data_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_200_flat.jsonl"
+    }
+  ],
+  "ranks": [1, 2, 4, 8],
+  "intervention_layers": [8, 11, 14, 18, 22],
+  "persona_layers": "all",
+  "output_layout": {
+    "reft_checkpoint_dir": "outputs/alignment/{trait}/{polarity}/reft_r{rank}_l{layer}",
+    "reft_subspace_npz":   "outputs/alignment/{trait}/{polarity}/reft_r{rank}_l{layer}/R.npz",
+    "persona_dir":         "outputs/alignment/{trait}/{polarity}/persona_layerwise",
+    "alignment_dir":       "outputs/alignment/{trait}/{polarity}/r{rank}_l{layer}",
+    "cross_steering_jsonl":"outputs/alignment/{trait}/{polarity}/persona_vec_l{layer}_a{alpha}.jsonl"
+  },
+  "eval_manifests": {
+    "openness": "configs/benchmarks/eval_openness.jsonl",
+    "hopefulness": "configs/benchmarks/eval_hopefulness.jsonl",
+    "cooperation": "configs/benchmarks/eval_cooperation.jsonl"
+  },
+  "notes": [
+    "For each (trait, polarity, rank, layer): train LoReFT -> extract R -> run analyze_reft_persona_alignment.py using the layerwise persona vectors from compute_layerwise_separability.py.",
+    "persona_layerwise is computed once per trait/polarity (rank-independent).",
+    "cross_steering_validation.py is run once per (trait, polarity, layer) with --alpha-mode=match-reft referencing the rank=4 R.npz."
+  ]
+}

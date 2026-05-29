@@ -1,0 +1,116 @@
+{
+  "name": "steering_methods_v1",
+  "classifier_train_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200_flat.jsonl",
+  "ranking": {
+    "directional_weight": 1.0,
+    "content_weight": 0.25,
+    "drift_weight": 0.25,
+    "significance_weight": 0.02,
+    "significance_threshold": 0.05
+  },
+  "runs": [
+    {
+      "name": "prompt_diff_l18_open",
+      "family": "prompt_diff",
+      "target_style": "open",
+      "notes": "Instruction-difference baseline around the earlier best prompt-diff layer.",
+      "params": {
+        "data_path": "data/processed/ncp_eval.jsonl",
+        "model_path": "Qwen/Qwen3-4B",
+        "positive_instruction": "Der Klient reagiert eher offen und spricht frei über Gedanken und Gefühle.",
+        "negative_instruction": "Der Klient reagiert eher defensiv und hält sich eher zurück.",
+        "neutral_instruction": "Der Klient antwortet auf die letzte Aussage des Beraters.",
+        "train_limit": 64,
+        "eval_limit": 100,
+        "eval_offset": 64,
+        "require_last_speaker": "Berater",
+        "min_turns": 3,
+        "max_context_chars": 1000,
+        "steering_mode": "single",
+        "layers": "18",
+        "alphas": "1.5,2.0",
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42
+      }
+    },
+    {
+      "name": "paired_dense_l11_open",
+      "family": "paired_dense",
+      "target_style": "open",
+      "notes": "Current preferred single-layer open-direction baseline.",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl",
+        "model_path": "Qwen/Qwen3-4B",
+        "positive_field": "open_response",
+        "negative_field": "defensive_response",
+        "layers": "11",
+        "train_limit": 128,
+        "eval_limit": 100,
+        "eval_offset": 128,
+        "alphas": "1.5,2.0",
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42
+      }
+    },
+    {
+      "name": "paired_dense_l11_defensive",
+      "family": "paired_dense",
+      "target_style": "defensive",
+      "notes": "Mirrored defensive-direction run at the currently preferred layer.",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl",
+        "model_path": "Qwen/Qwen3-4B",
+        "positive_field": "defensive_response",
+        "negative_field": "open_response",
+        "layers": "11",
+        "train_limit": 128,
+        "eval_limit": 100,
+        "eval_offset": 128,
+        "alphas": "1.5,2.0",
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42
+      }
+    },
+    {
+      "name": "paired_dense_weighted_9_11_open",
+      "family": "paired_dense",
+      "target_style": "open",
+      "notes": "Weighted multi-layer ablation around the early-middle separability peak.",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_openness_gpt54mini_200.jsonl",
+        "model_path": "Qwen/Qwen3-4B",
+        "positive_field": "open_response",
+        "negative_field": "defensive_response",
+        "layers": "9,10,11",
+        "steering_mode": "weighted",
+        "layer_scales": "9:0.8,10:0.95,11:1.0",
+        "train_limit": 128,
+        "eval_limit": 100,
+        "eval_offset": 128,
+        "alphas": "1.25,1.5,1.75,2.0",
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42
+      }
+    }
+  ]
+}

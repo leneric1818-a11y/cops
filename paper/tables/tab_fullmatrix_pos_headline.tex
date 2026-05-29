@@ -1,0 +1,31 @@
+% auto-generated
+\begin{table*}[t]\centering\small
+\begin{tabular}{ll c rr r}
+\toprule
+\textbf{Model} & \textbf{Axis} & \textbf{L} & \textbf{CB} & \textbf{CA} & \textbf{$\kappa$} \\
+\midrule
+Qwen3-4B & openness & L15 & $+0.297$ & $+0.303$ & $0.52$ \\
+Qwen3-4B & initiative & L9 & $-0.015$ & $+0.025$ & $0.40$ \\
+Qwen3-4B & cooperation & L20 & $+0.340$ & $+0.200$ & $0.47$ \\
+Qwen3-4B & hopefulness & L18 & $+0.225$ & $+0.180$ & $0.52$ \\
+\midrule
+Gemma-4-E4B-it & initiative & L13 & $+0.155$ & $+0.285$ & $0.47$ \\
+Gemma-4-E4B-it & cooperation & L23 & $+0.325$ & $+0.380$ & $0.46$ \\
+Gemma-4-E4B-it & hopefulness & L25 & $+0.380$ & $+0.185$ & $0.55$ \\
+\midrule
+Qwen3.5-9B & openness & L20 & $+0.410$ & $+0.285$ & $0.36$ \\
+Qwen3.5-9B & initiative & L20 & $-0.060$ & $+0.455$ & $0.17$ \\
+Qwen3.5-9B & cooperation & L15 & $+0.235$ & $+0.160$ & $0.33$ \\
+Qwen3.5-9B & hopefulness & L15 & $+0.290$ & $+0.295$ & $0.50$ \\
+\midrule
+Mistral-7B & openness & L15 & $+0.225$ & $+0.240$ & $0.45$ \\
+Mistral-7B & initiative & L5 & $-0.030$ & $+0.025$ & $0.39$ \\
+Mistral-7B & cooperation & L15 & $+0.115$ & $+0.045$ & $0.34$ \\
+Mistral-7B & hopefulness & L20 & $+0.040$ & $+0.025$ & $0.47$ \\
+\midrule
+\textbf{Mean} &  &  & $\mathbf{+0.195}$ & $\mathbf{+0.206}$ &  \\
+\bottomrule
+\end{tabular}
+\caption{Prespecified symmetric control at $\alphapos$: per (model, axis) cell, net-pairwise preference for the two case-agnostic variants $\textbf{CB}=\texttt{case\_blind}$ and $\textbf{CA}=\texttt{case\_aware}$. No per-cell variant selection. Mean over 15 cells: $\textbf{CB}=+0.195$, $\textbf{CA}=+0.206$. The per-cell oracle (best of the four variants per cell) appears in Table~\ref{tab:fullmatrix-pos-oracle} and adds $+0.070$ over CA on the mean. $N{=}200$ held-out contexts per cell ($N{=}600$ for Qwen3-4B \emph{openness}).}
+\label{tab:fullmatrix-pos-headline}
+\end{table*}

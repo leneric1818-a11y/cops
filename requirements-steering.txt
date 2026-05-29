@@ -1,0 +1,8 @@
+transformers
+accelerate
+safetensors
+tqdm
+pyyaml
+peft
+sentencepiece
+protobuf

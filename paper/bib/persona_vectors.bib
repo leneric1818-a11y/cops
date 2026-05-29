@@ -1,0 +1,362 @@
+% ── Core methods used in this paper ─────────────────────────────────────────
+
+@inproceedings{wu2024reft,
+  title     = {{ReFT}: Representation Fine-Tuning for Language Models},
+  author    = {Wu, Zhengxuan and Arora, Aryaman and Wang, Zheng and Geiger, Atticus and Jurafsky, Dan and Manning, Christopher D. and Potts, Christopher},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {37},
+  year      = {2024},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/75008a0fba53bf13b0bb3b7bff986e0e-Abstract-Conference.html}
+}
+
+@inproceedings{rimsky2023steering,
+  title     = {Steering {Llama~2} via Contrastive Activation Addition},
+  author    = {Rimsky, Nick and Gabrieli, Nick and Schulz, Julian and Tong, Meg and Hubinger, Evan and Turner, Alexander Matt},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2024},
+  address   = {Bangkok, Thailand},
+  pages     = {15504--15522},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2024.acl-long.828/}
+}
+
+@article{zou2023representation,
+  title   = {Representation Engineering: A Top-Down Approach to {AI} Transparency},
+  author  = {Zou, Andy and Phan, Long and Chen, Sarah and Campbell, James and Guo, Phillip and Ren, Richard and Pan, Alexander and Yin, Xuwang and Mazeika, Mantas and Dombrowski, Ann-Kathrin and Goel, Shashwat and Li, Nathaniel and Byun, Michael J. and Wang, Zifan and Mallen, Alex and Basart, Steven and Koyejo, Sanmi and Song, Dawn and Fredrikson, Matt and Kolter, J. Zico and Hendrycks, Dan},
+  journal = {arXiv preprint arXiv:2310.01405},
+  year    = {2023}
+}
+
+@article{billa2026predicting,
+  title   = {Predicting Where Steering Vectors Succeed},
+  author  = {Billa, Jayadev},
+  journal = {arXiv preprint arXiv:2604.15557},
+  year    = {2026}
+}
+
+@article{ju2025probing,
+  title   = {Probing then Editing Response Personality of Large Language Models},
+  author  = {Ju, Tianjie and Shao, Zhenyu and Wang, Bowen and Chen, Yujia and
+             Zhang, Zhuosheng and Fei, Hao and Lee, Mong-Li and Hsu, Wynne and others},
+  journal = {arXiv preprint arXiv:2504.10227},
+  year    = {2025}
+}
+
+% ── Base model ───────────────────────────────────────────────────────────────
+
+@article{qwen3,
+  title   = {Qwen3 Technical Report},
+  author  = {{Qwen Team}},
+  journal = {arXiv preprint},
+  year    = {2025},
+  note    = {See \url{https://huggingface.co/Qwen/Qwen3-4B}}
+}
+
+% ── Controllable generation ──────────────────────────────────────────────────
+
+@inproceedings{dathathri2020plug,
+  title     = {Plug and Play Language Models: A Simple Approach to Controlled Text Generation},
+  author    = {Dathathri, Sumanth and Madotto, Andrea and Lan, Janice and Hung, Jane and Frank, Eric and Molino, Piero and Yosinski, Jason and Liu, Rosanne},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2020}
+}
+
+@inproceedings{keskar2019ctrl,
+  title     = {{CTRL}: A Conditional Transformer Language Model for Controllable Generation},
+  author    = {Keskar, Nitish Shirish and McCann, Bryan and Varshney, Lav R. and Xiong, Caiming and Socher, Richard},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2020},
+  url       = {https://openreview.net/forum?id=H1edEyBKDS}
+}
+
+@inproceedings{turner2023activationengineering,
+  title     = {Steering Language Models With Activation Engineering},
+  author    = {Turner, Alexander Matt and Thiergart, Lisa and Leech, Gavin and Udell, David and Vazquez, Juan J. and Mini, Ulisse and MacDiarmid, Monte},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2025}
+}
+
+% ── Persona / style in dialogue ──────────────────────────────────────────────
+
+@inproceedings{zhang2018personalizing,
+  title     = {Personalizing Dialogue Agents: {I} have a dog, do you have pets too?},
+  author    = {Zhang, Saizheng and Dinan, Emily and Urbanek, Jack and Szlam, Arthur and Kiela, Douwe and Weston, Jason},
+  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2018},
+  address   = {Melbourne, Australia},
+  pages     = {2204--2213},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/P18-1205},
+  url       = {https://aclanthology.org/P18-1205/}
+}
+
+@article{shuster2022blenderbot,
+  title   = {{BlenderBot~3}: a deployed conversational agent that continually learns to responsibly engage},
+  author  = {Shuster, Kurt and Xu, Jing and Komeili, Mojtaba and Ju, Da and Smith, Eric Michael and Roller, Stephen and Ung, Megan and Chen, Moya and Artetxe, Mikel and Lerer, Adam and others},
+  journal = {arXiv preprint arXiv:2208.03188},
+  year    = {2022}
+}
+
+@inproceedings{xu2022cosplay,
+  title     = {{COSPLAY}: Concept Set Guided Personalized Dialogue Generation Across Both Party Personas},
+  author    = {Xu, Chen and Li, Piji and Wang, Wei and Yang, Haoran and Wang, Siyun and Xiao, Chuangbai},
+  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  year      = {2022},
+  publisher = {ACM},
+  doi       = {10.1145/3477495.3531957},
+  url       = {https://dl.acm.org/doi/10.1145/3477495.3531957}
+}
+
+@inproceedings{han2023personapkt,
+  title     = {{PersonaPKT}: Building Personalized Dialogue Agents via Parameter-efficient Knowledge Transfer},
+  author    = {Han, Yubo and Zhang, Shaohan and Wang, Yichen and Huang, Fei and Wei, Furu},
+  booktitle = {Proceedings of the Fourth Workshop on Simple and Efficient Natural Language Processing ({SustaiNLP})},
+  year      = {2023},
+  address   = {Toronto, Canada (Hybrid)},
+  pages     = {264--273},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2023.sustainlp-1.21},
+  url       = {https://aclanthology.org/2023.sustainlp-1.21/}
+}
+
+% ── Synthetic trait evaluation datasets ─────────────────────────────────────
+
+@article{chen2025personavectors,
+  title   = {Persona Vectors: Monitoring and Controlling Character Traits in Language Models},
+  author  = {Chen, Runjin and Arditi, Andy and Sleight, Henry and Evans, Owain and Lindsey, Jack},
+  journal = {arXiv preprint arXiv:2507.21509},
+  year    = {2025}
+}
+
+@inproceedings{wu2025axbench,
+  title     = {{AxBench}: Steering {LLMs}? Even Simple Baselines Outperform Sparse Autoencoders},
+  author    = {Wu, Zhengxuan and Arora, Aryaman and Geiger, Atticus and Wang, Zheng and Huang, Jing and Jurafsky, Dan and Manning, Christopher D. and Potts, Christopher},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
+  year      = {2025}
+}
+
+% ── Probing and layerwise analysis ───────────────────────────────────────────
+
+@inproceedings{alain2016understanding,
+  title     = {Understanding Intermediate Layers Using Linear Classifier Probes},
+  author    = {Alain, Guillaume and Bengio, Yoshua},
+  booktitle = {ICLR 2017 Workshop Track},
+  year      = {2017}
+}
+
+@inproceedings{tenney2019bert,
+  title     = {{BERT} Rediscovers the Classical {NLP} Pipeline},
+  author    = {Tenney, Ian and Das, Dipanjan and Pavlick, Ellie},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  year      = {2019}
+}
+
+% ── NCP counseling dataset ───────────────────────────────────────────────────
+
+% TODO: add correct citation for the NCP counseling dialogue corpus
+
+% ── Virtual client systems in counseling education ───────────────────────────
+
+@inproceedings{rudolph2024virtualclient,
+  title     = {An {AI}-Based Virtual Client for Educational Role-Playing in the Training of Online Counselors},
+  author    = {Rudolph, Eric and Engert, N. and Albrecht, Jens},
+  booktitle = {Proceedings of the 16th International Conference on Computer Supported Education ({CSEDU})},
+  volume    = {2},
+  pages     = {108--117},
+  year      = {2024}
+}
+
+@inproceedings{louie2024roleplaydoh,
+  title     = {Roleplay-doh: Enabling Domain-Experts to Create {LLM}-simulated Patients via Eliciting and Adhering to Principles},
+  author    = {Louie, Ryan and Nandi, Ananjan and Fang, William and Chang, Cheng and Brunskill, Emma and Yang, Diyi},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {10570--10603},
+  year      = {2024},
+  address   = {Miami, Florida, USA}
+}
+
+@inproceedings{steenstra2025scaffolding,
+  title     = {Scaffolding Empathy: Training Counselors with Simulated Patients and Utterance-level Performance Visualizations},
+  author    = {Steenstra, Ian and Nouraei, Farnaz and Bickmore, Timothy W.},
+  booktitle = {Proceedings of the 2025 {CHI} Conference on Human Factors in Computing Systems},
+  year      = {2025},
+  articleno = {593},
+  numpages  = {22},
+  publisher = {ACM},
+  doi       = {10.1145/3706598.3714014},
+  url       = {https://dl.acm.org/doi/10.1145/3706598.3714014}
+}
+
+@inproceedings{rudolph2025comparing,
+  title     = {Comparing Human Role-Players and {LLM}-Simulated Clients in Online Counselling Training: An Analysis of Counselling Patterns},
+  author    = {Rudolph, Eric and Steigerwald, Philipp and Albrecht, Jens},
+  booktitle = {Proceedings of the 18th International Conference on Educational Data Mining},
+  year      = {2025}
+}
+
+@article{steigerwald2026aisystems,
+  title   = {{AI} Systems in Text-Based Online Counselling: Ethical Considerations Across Three Implementation Approaches},
+  author  = {Steigerwald, Philipp and Burghardt, Jennifer and Rudolph, Eric and Albrecht, Jens},
+  journal = {arXiv preprint arXiv:2601.08878},
+  year    = {2026}
+}
+
+@article{steigerwald2026llars,
+  title   = {{LLARS}: Enabling Domain Expert and Developer Collaboration for {LLM} Prompting, Generation and Evaluation},
+  author  = {Steigerwald, Philipp and Stieler, Mara and Burghardt, Jennifer and Rudolph, Eric and Albrecht, Jens},
+  journal = {arXiv preprint arXiv:2605.10593},
+  year    = {2026}
+}
+
+% ── Client / patient simulation ──────────────────────────────────────────────
+
+@inproceedings{wang2024patientpsi,
+  title     = {{PATIENT-$\Psi$}: Using Large Language Models to Simulate Patients for Training Mental Health Professionals},
+  author    = {Wang, Ruiyi and Milani, Stephanie and Chiu, Jamie C. and Zhi, Jiayin and Eack, Shaun M. and Labrum, Travis and Murphy, Samuel M. and Jones, Nev and Hardy, Kate and Shen, Hong and Fang, Fei and Chen, Zhiyu Zoey},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2024},
+  address   = {Miami, Florida, USA},
+  pages     = {12772--12797},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.emnlp-main.711},
+  url       = {https://aclanthology.org/2024.emnlp-main.711/}
+}
+
+@article{qiu2024interactiveagents,
+  title   = {Interactive Agents: Simulating Counselor-Client Psychological Counseling via Role-Playing {LLM}-to-{LLM} Interactions},
+  author  = {Qiu, Lijun and Lan, Tian},
+  journal = {arXiv preprint arXiv:2408.15787},
+  year    = {2024}
+}
+
+@article{qiu2026psyclient,
+  title   = {{PsyCLIENT}: Client Simulation via Conversational Trajectory Modeling for Trainee Practice and Model Evaluation in Mental Health Counseling},
+  author  = {Qiu, Huachuan and Chen, Zhaoming and Chen, Yuqian and Xie, Yuan and Lu, Yu and Lan, Zhenzhong},
+  journal = {arXiv preprint arXiv:2601.07312},
+  year    = {2026}
+}
+
+@article{sabour2026patienthub,
+  title   = {{PatientHub}: A Unified Framework for Patient Simulation},
+  author  = {Sabour, Sahand and Ng, TszYam and Huang, Minlie},
+  journal = {arXiv preprint arXiv:2602.11684},
+  year    = {2026}
+}
+
+% ── Dialogue planning / control ──────────────────────────────────────────────
+
+@article{li2024dialogueactiontokens,
+  title   = {Dialogue Action Tokens: Steering Language Models in Goal-Directed Dialogue with a Multi-Turn Planner},
+  author  = {Li, Kenneth and Wang, Yiming and Vi{\'e}gas, Fernanda and Wattenberg, Martin},
+  journal = {arXiv preprint arXiv:2406.11978},
+  year    = {2024}
+}
+
+% ── Evaluation / judges ──────────────────────────────────────────────────────
+
+@article{gu2024llmjudge,
+  title   = {A Survey on {LLM}-as-a-Judge},
+  author  = {Gu, Jiawei and Jiang, Xuhui and Shi, Zhichao and Tan, Hexiang and Zhai, Xuehao and Xu, Chengjin and Li, Wei and Shen, Yinghan and Ma, Shengjie and Liu, Honghao and Wang, Saizhuo and Zhang, Kun and Wang, Yuanzhuo and Gao, Wen and Ni, Lionel and Guo, Jian},
+  journal = {arXiv preprint arXiv:2411.15594},
+  year    = {2024}
+}
+
+@inproceedings{kim-etal-2024-prometheus,
+  title     = {Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models},
+  author    = {Kim, Seungone and Suk, Juyoung and Longpre, Shayne and Lin, Bill Yuchen and Shin, Jamin and Welleck, Sean and Neubig, Graham and Lee, Moontae and Lee, Kyungjae and Seo, Minjoon},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2024},
+  address   = {Miami, Florida, USA},
+  pages     = {4334--4353},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.emnlp-main.248},
+  url       = {https://aclanthology.org/2024.emnlp-main.248/}
+}
+
+@inproceedings{chen-etal-2024-humans,
+  title     = {Humans or {LLM}s as the Judge? A Study on Judgement Bias},
+  author    = {Chen, Guiming Hardy and Chen, Shunian and Liu, Ziche and Jiang, Feng and Wang, Benyou},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2024},
+  address   = {Miami, Florida, USA},
+  pages     = {8301--8327},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.emnlp-main.474},
+  url       = {https://aclanthology.org/2024.emnlp-main.474/}
+}
+
+@inproceedings{chen-etal-2025-beyond,
+  title     = {Beyond the Surface: Measuring Self-Preference in {LLM} Judgments},
+  author    = {Chen, Zhi-Yuan and Wang, Hao and Zhang, Xinyu and Hu, Enrui and Lin, Yankai},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2025},
+  address   = {Suzhou, China},
+  pages     = {1653--1672},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.emnlp-main.86},
+  url       = {https://aclanthology.org/2025.emnlp-main.86/}
+}
+
+@inproceedings{wang-etal-2025-improving-llm-judge,
+  title     = {Improving {LLM}-as-a-Judge Inference with the Judgment Distribution},
+  author    = {Wang, Victor and Zhang, Michael JQ and Choi, Eunsol},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year      = {2025},
+  address   = {Suzhou, China},
+  pages     = {23173--23199},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.findings-emnlp.1259},
+  url       = {https://aclanthology.org/2025.findings-emnlp.1259/}
+}
+
+@inproceedings{fu2025multilingualjudge,
+  title     = {How Reliable is Multilingual {LLM}-as-a-Judge?},
+  author    = {Fu, Xiyan and Liu, Wei},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year      = {2025},
+  address   = {Suzhou, China},
+  pages     = {11040--11053},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.findings-emnlp.587},
+  url       = {https://aclanthology.org/2025.findings-emnlp.587/}
+}
+
+% ── EMNLP CFP ────────────────────────────────────────────────────────────────
+
+@misc{emnlp2026cfp,
+  title        = {{EMNLP} 2026 Call for Main Conference Papers},
+  howpublished = {\url{https://2026.emnlp.org/calls/main_conference_papers/}},
+  note         = {Accessed: 2026-04-02}
+}
+
+@inproceedings{arditi2024refusal,
+  title     = {Refusal in Language Models Is Mediated by a Single Direction},
+  author    = {Arditi, Andy and Obeso, Oscar and Syed, Aaquib and Paleka, Daniel and Rimsky, Nina and Gurnee, Wes and Nanda, Neel},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {37},
+  pages     = {136037--136083},
+  year      = {2024},
+  publisher = {Curran Associates, Inc.},
+  url       = {https://openreview.net/forum?id=pH3XAQME6c}
+}
+
+@inproceedings{albrecht2026oncoco,
+  title     = {{OnCoCo} 1.0: A Public Dataset for Fine-Grained Message Classification in Online Counseling Conversations},
+  author    = {Albrecht, Jens and Lehmann, Robert and Poltermann, Aleksandra and Rudolph, Eric and Steigerwald, Philipp and Stieler, Mara},
+  booktitle = {Proceedings of the Joint Workshop on Social Context (SoCon) and Integrating NLP and Psychology to Study Social Interactions (NLPSI) at LREC-COLING 2026},
+  address   = {Palma de Mallorca, Spain},
+  month     = may,
+  year      = {2026},
+  url       = {https://socon-nlpsi.github.io/}
+}
+
+@article{monroe2008fightin,
+  title   = {Fightin' Words: Lexical Feature Selection and Evaluation for
+             Identifying the Content of Political Conflict},
+  author  = {Monroe, Burt L. and Colaresi, Michael P. and Quinn, Kevin M.},
+  journal = {Political Analysis},
+  volume  = {16},
+  number  = {4},
+  pages   = {372--403},
+  year    = {2008}
+}

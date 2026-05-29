@@ -1,0 +1,131 @@
+{
+  "name": "persona_multimodel_benchmark_index_v1",
+  "generated": [
+    {
+      "axis_name": "openness",
+      "model_slug": "qwen3_4b",
+      "best_layer": 1,
+      "config_path": "configs/benchmarks/model_matrix/persona_openness_v1__qwen3_4b.json"
+    },
+    {
+      "axis_name": "initiative",
+      "model_slug": "qwen3_4b",
+      "best_layer": 9,
+      "config_path": "configs/benchmarks/model_matrix/persona_initiative_v1__qwen3_4b.json"
+    },
+    {
+      "axis_name": "cooperation",
+      "model_slug": "qwen3_4b",
+      "best_layer": 9,
+      "config_path": "configs/benchmarks/model_matrix/persona_cooperation_v1__qwen3_4b.json"
+    },
+    {
+      "axis_name": "hopefulness",
+      "model_slug": "qwen3_4b",
+      "best_layer": 7,
+      "config_path": "configs/benchmarks/model_matrix/persona_hopefulness_v1__qwen3_4b.json"
+    }
+  ],
+  "skipped": [
+    {
+      "axis_name": "openness",
+      "model_slug": "qwen3_5_2b",
+      "reason": "missing outputs/metrics/layerwise_separability_openness_qwen3_5_2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "openness",
+      "model_slug": "qwen3_5_4b",
+      "reason": "missing outputs/metrics/layerwise_separability_openness_qwen3_5_4b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "openness",
+      "model_slug": "qwen3_5_9b",
+      "reason": "missing outputs/metrics/layerwise_separability_openness_qwen3_5_9b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "openness",
+      "model_slug": "gemma_4_e2b",
+      "reason": "missing outputs/metrics/layerwise_separability_openness_gemma_4_e2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "openness",
+      "model_slug": "gemma_4_e4b_it",
+      "reason": "missing outputs/metrics/layerwise_separability_openness_gemma_4_e4b_it_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "initiative",
+      "model_slug": "qwen3_5_2b",
+      "reason": "missing outputs/metrics/layerwise_separability_initiative_qwen3_5_2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "initiative",
+      "model_slug": "qwen3_5_4b",
+      "reason": "missing outputs/metrics/layerwise_separability_initiative_qwen3_5_4b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "initiative",
+      "model_slug": "qwen3_5_9b",
+      "reason": "missing outputs/metrics/layerwise_separability_initiative_qwen3_5_9b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "initiative",
+      "model_slug": "gemma_4_e2b",
+      "reason": "missing outputs/metrics/layerwise_separability_initiative_gemma_4_e2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "initiative",
+      "model_slug": "gemma_4_e4b_it",
+      "reason": "missing outputs/metrics/layerwise_separability_initiative_gemma_4_e4b_it_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "cooperation",
+      "model_slug": "qwen3_5_2b",
+      "reason": "missing outputs/metrics/layerwise_separability_cooperation_qwen3_5_2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "cooperation",
+      "model_slug": "qwen3_5_4b",
+      "reason": "missing outputs/metrics/layerwise_separability_cooperation_qwen3_5_4b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "cooperation",
+      "model_slug": "qwen3_5_9b",
+      "reason": "missing outputs/metrics/layerwise_separability_cooperation_qwen3_5_9b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "cooperation",
+      "model_slug": "gemma_4_e2b",
+      "reason": "missing outputs/metrics/layerwise_separability_cooperation_gemma_4_e2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "cooperation",
+      "model_slug": "gemma_4_e4b_it",
+      "reason": "missing outputs/metrics/layerwise_separability_cooperation_gemma_4_e4b_it_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "hopefulness",
+      "model_slug": "qwen3_5_2b",
+      "reason": "missing outputs/metrics/layerwise_separability_hopefulness_qwen3_5_2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "hopefulness",
+      "model_slug": "qwen3_5_4b",
+      "reason": "missing outputs/metrics/layerwise_separability_hopefulness_qwen3_5_4b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "hopefulness",
+      "model_slug": "qwen3_5_9b",
+      "reason": "missing outputs/metrics/layerwise_separability_hopefulness_qwen3_5_9b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "hopefulness",
+      "model_slug": "gemma_4_e2b",
+      "reason": "missing outputs/metrics/layerwise_separability_hopefulness_gemma_4_e2b_gpt54mini_1000/best_layers.json"
+    },
+    {
+      "axis_name": "hopefulness",
+      "model_slug": "gemma_4_e4b_it",
+      "reason": "missing outputs/metrics/layerwise_separability_hopefulness_gemma_4_e4b_it_gpt54mini_1000/best_layers.json"
+    }
+  ]
+}

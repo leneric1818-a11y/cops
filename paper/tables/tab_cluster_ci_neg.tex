@@ -1,0 +1,32 @@
+% auto-generated
+\begin{table}[t]\centering\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}ll c cc cc@{}}
+\toprule
+\textbf{Model} & \textbf{Pole} & \textbf{L} & \multicolumn{2}{c}{\textbf{CB} 95\% CI} & \multicolumn{2}{c}{\textbf{CA} 95\% CI} \\
+ & & & lo & hi & lo & hi \\
+\midrule
+Qwen-4B & defensive & 15 & $-0.224$ & $+0.054$ & $-0.191$ & $+0.088$ \\
+Qwen-4B & reactive & 9 & $-0.265$ & $+0.080$ & $-0.103$ & $+0.170$ \\
+Qwen-4B & resistant & 20 & $+0.559$ & $+0.714$ & $+0.532$ & $+0.727$ \\
+Qwen-4B & resigned & 18 & $+0.527$ & $+0.689$ & $+0.647$ & $+0.783$ \\
+\midrule
+Gemma & defensive & 3 & $-0.027$ & $+0.252$ & $-0.105$ & $+0.154$ \\
+Gemma & reactive & 13 & $-0.153$ & $+0.085$ & $-0.126$ & $+0.148$ \\
+Gemma & resistant & 23 & $+0.203$ & $+0.370$ & $+0.422$ & $+0.622$ \\
+Gemma & resigned & 25 & $+0.364$ & $+0.629$ & $+0.293$ & $+0.558$ \\
+\midrule
+Qwen-9B & defensive & 20 & $-0.225$ & $+0.146$ & $-0.145$ & $+0.057$ \\
+Qwen-9B & reactive & 20 & $-0.218$ & $+0.100$ & $+0.132$ & $+0.371$ \\
+Qwen-9B & resistant & 15 & $+0.382$ & $+0.575$ & $+0.456$ & $+0.632$ \\
+Qwen-9B & resigned & 15 & $+0.398$ & $+0.610$ & $+0.583$ & $+0.766$ \\
+\midrule
+Mistral & defensive & 15 & $-0.209$ & $+0.074$ & $-0.097$ & $+0.155$ \\
+Mistral & reactive & 5 & $-0.108$ & $+0.080$ & $-0.088$ & $+0.235$ \\
+Mistral & resistant & 15 & $+0.473$ & $+0.775$ & $+0.538$ & $+0.754$ \\
+Mistral & resigned & 20 & $+0.258$ & $+0.436$ & $+0.330$ & $+0.558$ \\
+\bottomrule
+\end{tabular}
+\caption{Cluster-bootstrap 95\% CIs for the headline $\alpha{=}{-}3$ matrix (Table~\ref{tab:fullmatrix-neg-headline}). Resampled on the 10 personas (each tied to one case; see \S\ref{sec:limitations}) with $n_\text{boot}=2000$ percentile intervals. Strong axes (\emph{resistant, resigned}) hold all 16 cells significantly above 0; weak axes (\emph{defensive, reactive}) overlap 0 on most cells, consistent with the axis-asymmetry reported in \S\ref{sec:negalpha}.}
+\label{tab:cluster-ci-neg}
+\end{table}

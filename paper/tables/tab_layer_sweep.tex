@@ -1,0 +1,30 @@
+% auto-generated
+\begin{table*}[t]\centering\small
+\begin{tabular}{ll cr cr}
+\toprule
+\textbf{Model} & \textbf{Axis} & \textbf{AUC L} & \textbf{AUC \netpw} & \textbf{Sweep L} & \textbf{Sweep \netpw} \\
+\midrule
+Gemma-4-E4B-it & cooperation & L23 & $+0.120$ & L23 & $+0.120$ \\
+Gemma-4-E4B-it & hopefulness & L13 & $+0.120$ & L25 & $+0.320$ \\
+Gemma-4-E4B-it & initiative & L8 & $-0.060$ & L13 & $+0.060$ \\
+Gemma-4-E4B-it & openness & L3 & $+0.200$ & L3 & $+0.200$ \\
+\midrule
+Mistral-7B & cooperation & L5 & $+0.020$ & L15 & $+0.102$ \\
+Mistral-7B & hopefulness & L5 & $+0.120$ & L20 & $+0.380$ \\
+Mistral-7B & initiative & L5 & $+0.280$ & L5 & $+0.280$ \\
+Mistral-7B & openness & L5 & $-0.080$ & L15 & $+0.240$ \\
+\midrule
+Qwen3-4B & cooperation & L9 & $+0.060$ & L20 & $+0.220$ \\
+Qwen3-4B & hopefulness & L7 & $-0.040$ & L18 & $+0.060$ \\
+Qwen3-4B & initiative & L9 & $+0.000$ & L9 & $+0.000$ \\
+Qwen3-4B & openness & L1 & $+0.020$ & L15 & $+0.320$ \\
+\midrule
+Qwen3.5-9B & cooperation & L5 & $+0.080$ & L15 & $+0.200$ \\
+Qwen3.5-9B & hopefulness & L5 & n/a & L15 & $+0.420$ \\
+Qwen3.5-9B & initiative & L5 & $+0.100$ & L20 & $+0.180$ \\
+Qwen3.5-9B & openness & L5 & $+0.180$ & L20 & $+0.500$ \\
+\bottomrule
+\end{tabular}
+\caption{Layer selection: AUC-best layer vs empirical sweep-best layer. \netpw at $\alpha=1.5$, \texttt{case\_blind} variant, $N=50$ held-out contexts, 3-judge ensemble. AUC-best layer matches sweep-best in only 1/16 cells (Gemma cooperation L23).}
+\label{tab:layer-sweep}
+\end{table*}

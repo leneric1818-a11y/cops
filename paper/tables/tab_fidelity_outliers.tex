@@ -1,0 +1,51 @@
+% auto-generated
+\begin{table}[t]\centering\small
+\begin{tabular}{ll c l r rr}
+\toprule
+\textbf{Model} & \textbf{Axis} & \textbf{L} & \textbf{Variant} & $\alpha$ & $\Delta$\textbf{case} & $\Delta$\textbf{role} \\
+\midrule
+Qwen3.5-9B & hopefulness & L15 & \texttt{case\_blind} & $-3.0$ & \textbf{$-0.292$} & $+0.145$ \\
+Qwen3.5-9B & cooperation & L15 & \texttt{case\_blind} & $-3.0$ & \textbf{$-0.268$} & $+0.122$ \\
+\midrule
+Qwen3-4B & openness & L15 & \texttt{case\_blind} & $-3.0$ & \textbf{$-0.182$} & \textbf{$-0.107$} \\
+\midrule
+Mistral-7B & hopefulness & L20 & \texttt{case\_aware} & $-3.0$ & \textbf{$-0.150$} & $+0.110$ \\
+Mistral-7B & cooperation & L15 & \texttt{persona\_matched} & $-1.5$ & \textbf{$-0.142$} & $+0.033$ \\
+\midrule
+Qwen3.5-9B & hopefulness & L15 & \texttt{case\_blind} & $-1.5$ & \textbf{$-0.138$} & $+0.090$ \\
+\midrule
+Mistral-7B & hopefulness & L20 & \texttt{persona\_mismatched} & $-3.0$ & \textbf{$-0.135$} & $+0.060$ \\
+Mistral-7B & cooperation & L15 & \texttt{case\_blind} & $-3.0$ & \textbf{$-0.118$} & $+0.048$ \\
+\midrule
+Gemma-4-E4B-it & cooperation & L23 & \texttt{case\_blind} & $-3.0$ & $-0.038$ & \textbf{$-0.112$} \\
+\midrule
+Mistral-7B & hopefulness & L20 & \texttt{case\_blind} & $-3.0$ & \textbf{$-0.111$} & $+0.104$ \\
+Mistral-7B & hopefulness & L20 & \texttt{persona\_matched} & $-3.0$ & \textbf{$-0.110$} & $+0.063$ \\
+\midrule
+Qwen3.5-9B & initiative & L20 & \texttt{case\_blind} & $-3.0$ & \textbf{$-0.110$} & \textbf{$-0.107$} \\
+\midrule
+Mistral-7B & openness & L15 & \texttt{case\_aware} & $-1.5$ & \textbf{$-0.105$} & $-0.022$ \\
+\midrule
+Qwen3.5-9B & initiative & L20 & \texttt{persona\_matched} & $+3.0$ & \textbf{$-0.165$} & \textbf{$-0.122$} \\
+\midrule
+Mistral-7B & hopefulness & L20 & \texttt{case\_blind} & $+3.0$ & \textbf{$-0.145$} & \textbf{$-0.120$} \\
+\midrule
+Qwen3.5-9B & initiative & L20 & \texttt{persona\_mismatched} & $+3.0$ & \textbf{$-0.145$} & $-0.067$ \\
+\midrule
+Mistral-7B & hopefulness & L20 & \texttt{persona\_mismatched} & $+3.0$ & $-0.015$ & \textbf{$-0.142$} \\
+\midrule
+Qwen3-4B & initiative & L9 & \texttt{persona\_matched} & $+3.0$ & \textbf{$-0.140$} & $-0.068$ \\
+\midrule
+Mistral-7B & initiative & L5 & \texttt{persona\_matched} & $+3.0$ & \textbf{$-0.137$} & $-0.085$ \\
+\midrule
+Qwen3.5-9B & initiative & L20 & \texttt{case\_blind} & $+3.0$ & \textbf{$-0.132$} & $-0.075$ \\
+\midrule
+Qwen3-4B & initiative & L9 & \texttt{case\_blind} & $+3.0$ & \textbf{$-0.117$} & $-0.055$ \\
+\midrule
+Mistral-7B & hopefulness & L20 & \texttt{case\_aware} & $+3.0$ & $-0.030$ & \textbf{$-0.110$} \\
+Mistral-7B & hopefulness & L20 & \texttt{persona\_matched} & $+3.0$ & $-0.027$ & \textbf{$-0.103$} \\
+\bottomrule
+\end{tabular}
+\caption{Per-cell outliers from Table~\ref{tab:fidelity-deltas}: (model, axis, layer, variant, $\alpha$) combinations where the mean $\Delta$case\_fidelity or $\Delta$client\_role\_fidelity drops below $-0.10$ (boldface marks the offending dimension). Outliers concentrate in three groups: (i) Qwen3.5-9B \emph{hopefulness}/\emph{cooperation} at $\alpha=-3.0$, but only under \texttt{case\_blind} --- the case-aware and persona-conditioned variants on the same stems hold $\Delta$case within $\pm 0.05$ \emph{and} achieve higher $\netpw$ (e.g.\ Qwen3.5-9B \emph{hopefulness}: \texttt{persona\_mismatched} $\netpw=+0.75$ at $\Delta$case$=+0.04$ vs.\ \texttt{case\_blind} $\netpw=+0.51$ at $\Delta$case$=-0.29$); (ii) Mistral-7B \emph{hopefulness} L20 at $\alpha=-3.0$, where all variants drift on case ($-0.11$ to $-0.15$) --- an axis-level rather than method-level failure; (iii) \emph{initiative} on three of four models at $\alpha=+3.0$. The worst single cell is Qwen3.5-9B \emph{hopefulness} L15 / \texttt{case\_blind} / $\alpha=-3.0$ at $\Delta$case $=-0.292$.}
+\label{tab:fidelity-outliers}
+\end{table}

@@ -1,0 +1,26 @@
+{
+  "description": "Paper-level COPS report manifest. Selects only the canonical merged files; excludes per-seed partials, single-axis smoke runs, and high-alpha exploratory runs that lack baselines.",
+  "classifier_summaries": [
+    "../../outputs/steering_eval/paper/scored/qwen_openness_L1_all_summary.json",
+    "../../outputs/steering_eval/paper/scored/qwen_openness_L1_ext_all_summary.json",
+    "../../outputs/steering_eval/paper/scored/gemma_openness_L3_all_summary.json",
+    "../../outputs/steering_eval/paper/scored/gemma_openness_L10_all_summary.json",
+    "../../outputs/steering_eval/paper/scored/qwen_initiative_full_all_summary.json",
+    "../../outputs/steering_eval/paper/scored/gemma_initiative_full_all_summary.json",
+    "../../outputs/steering_eval/paper/scored/qwen_cooperation_negalpha_summary.json",
+    "../../outputs/steering_eval/paper/scored/gemma_cooperation_negalpha_summary.json",
+    "../../outputs/steering_eval/paper/scored/qwen_hopefulness_negalpha_summary.json",
+    "../../outputs/steering_eval/paper/scored/gemma_hopefulness_negalpha_summary.json"
+  ],
+  "judge_summaries": [
+    "../../outputs/steering_eval/judged/qwen_openness_L1_all_judge_summary.json",
+    "../../outputs/steering_eval/judged/gemma_openness_L3_all_judge_summary.json",
+    "../../outputs/steering_eval/judged/gemma_openness_L10_all_judge_summary.json",
+    "../../outputs/steering_eval/judged/qwen_initiative_full_all_judge_summary.json",
+    "../../outputs/steering_eval/judged/gemma_initiative_full_all_judge_summary.json",
+    "../../outputs/steering_eval/judged/qwen_cooperation_negalpha_judge_summary.json",
+    "../../outputs/steering_eval/judged/gemma_cooperation_negalpha_judge_summary.json",
+    "../../outputs/steering_eval/judged/qwen_hopefulness_negalpha_judge_summary.json",
+    "../../outputs/steering_eval/judged/gemma_hopefulness_negalpha_judge_summary.json"
+  ]
+}

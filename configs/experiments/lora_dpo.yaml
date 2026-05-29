@@ -1,0 +1,49 @@
+experiment_name: lora_dpo_swda
+pipeline: lora_dpo
+
+dataset:
+  name: swda
+  path: ${DPO_DATA_PATH}
+  prompt_field: prompt
+  chosen_field: chosen
+  rejected_field: rejected
+
+model:
+  base_model: unsloth/Qwen3-4B-unsloth-bnb-4bit
+  load_in_4bit: true
+  dtype: auto
+  lora:
+    r: 16
+    alpha: 32
+    dropout: 0
+
+training:
+  epochs: 2
+  lr: 5e-6
+  max_steps: 3000
+  batch_size: 2
+  gradient_accumulation_steps: 8
+  max_seq_len: 2048
+  warmup_steps: 50
+  logging_steps: 25
+  save_steps: 200
+  optim: adamw_8bit
+  report_to:
+    - wandb
+  run_name: lora_dpo_new_eval_qwen3_4b
+
+dpo:
+  beta: 0.3
+  max_prompt_length: 1024
+  max_completion_length: 1024
+
+lora_dpo:
+  run_sft_first: false
+  adapter_path: null
+
+output_dir: outputs/checkpoints/lora_dpo_swda
+
+slurm:
+  cluster: cluster_b
+  template: slurm/templates/cluster_b.sh.j2
+  command: python -m scripts.train_lora_dpo --config configs/experiments/lora_dpo.yaml

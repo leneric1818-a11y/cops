@@ -1,0 +1,16 @@
+experiment_name: transition_matrix_swda
+pipeline: transition_matrix
+
+dataset:
+  name: swda
+  path: data/processed/swda.jsonl
+
+transition_matrix:
+  output_path: outputs/metrics/transition_matrix.csv
+  smoothing: 0.0
+  write_priors: true
+
+slurm:
+  cluster: cluster_a
+  template: slurm/templates/cluster_a.sh.j2
+  command: python -m scripts.train_transition_matrix --config configs/experiments/transition_matrix.yaml

@@ -1,0 +1,37 @@
+experiment_name: lora_ft_swda
+pipeline: lora_ft
+
+dataset:
+  name: swda
+  path: data/processed/swda.jsonl
+  text_field: text
+
+model:
+  base_model: unsloth/Qwen3-4B-unsloth-bnb-4bit
+  load_in_4bit: true
+  dtype: auto
+  lora:
+    r: 16
+    alpha: 32
+    dropout: 0.05
+
+training:
+  epochs: 3
+  lr: 2e-4
+  batch_size: 2
+  gradient_accumulation_steps: 16
+  max_seq_len: 2048
+  warmup_steps: 50
+  logging_steps: 25
+  save_steps: 200
+  optim: adamw_8bit
+  report_to:
+    - wandb
+  run_name: lora_ft_qwen3_4b
+
+output_dir: outputs/checkpoints/lora_ft_swda
+
+slurm:
+  cluster: cluster_a
+  template: slurm/templates/cluster_a.sh.j2
+  command: python -m scripts.train_lora --config configs/experiments/lora_ft.yaml

@@ -1,0 +1,567 @@
+{
+  "eval_file": "mistral7b_cooperation_L15_neg",
+  "eval_stem": "mistral7b_cooperation_L15_neg",
+  "axis": "cooperation",
+  "model_path": "mistralai/Mistral-7B-Instruct-v0.3",
+  "providers": [
+    {
+      "provider": "cluster_mistral",
+      "model": "mistralai/Magistral-Small-2509",
+      "effort": null
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-nano",
+      "effort": "high"
+    },
+    {
+      "provider": "ionos",
+      "model": "openai/gpt-oss-120b",
+      "effort": "high"
+    }
+  ],
+  "run_seeds": [
+    42
+  ],
+  "n_seeds_detected": 1,
+  "n_pairs": 1600,
+  "n_ensembled_rows": 1600,
+  "inter_rater_agreement": {
+    "pairwise_cohen_kappa": {
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__openai:gpt-5.4-nano@high": 0.3925828118821604,
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__ionos:openai/gpt-oss-120b@high": 0.3342874115232542,
+      "openai:gpt-5.4-nano@high__vs__ionos:openai/gpt-oss-120b@high": 0.4557368971121788
+    },
+    "fleiss_kappa": 0.3936268674494669
+  },
+  "by_variant_alpha": {
+    "P_matched__a-1.5": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.57,
+      "pairwise_tie_rate": 0.115,
+      "pairwise_base_win_rate": 0.315,
+      "pairwise_net_overall": 0.255,
+      "axis_alignment_delta_mean": 0.48,
+      "axis_alignment_delta_std_pooled": 0.9560567161232875,
+      "case_fidelity_delta_mean": -0.1416666666666667,
+      "case_fidelity_delta_std_pooled": 1.0041234430531383,
+      "client_role_fidelity_delta_mean": 0.033333333333333354,
+      "client_role_fidelity_delta_std_pooled": 0.5206833117271104,
+      "training_utility_delta_mean": 0.3933333333333333,
+      "training_utility_delta_std_pooled": 0.878610013348104,
+      "axis_alignment_pairwise_steered_win_rate": 0.6,
+      "axis_alignment_pairwise_base_win_rate": 0.245,
+      "axis_alignment_pairwise_tie_rate": 0.155,
+      "axis_alignment_pairwise_net": 0.355,
+      "case_fidelity_pairwise_steered_win_rate": 0.33,
+      "case_fidelity_pairwise_base_win_rate": 0.43,
+      "case_fidelity_pairwise_tie_rate": 0.24,
+      "case_fidelity_pairwise_net": -0.1,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.385,
+      "client_role_fidelity_pairwise_base_win_rate": 0.275,
+      "client_role_fidelity_pairwise_tie_rate": 0.34,
+      "client_role_fidelity_pairwise_net": 0.11,
+      "training_utility_pairwise_steered_win_rate": 0.575,
+      "training_utility_pairwise_base_win_rate": 0.275,
+      "training_utility_pairwise_tie_rate": 0.15,
+      "training_utility_pairwise_net": 0.3,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.57
+      ],
+      "win_rate_mean_over_seeds": 0.57,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        -0.1416666666666667
+      ],
+      "case_fidelity_delta_mean_over_seeds": -0.1416666666666667,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.355
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        -0.1
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.11
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.3
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.355,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": -0.1,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.11,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.3,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "P_matched__a-3.0": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.815,
+      "pairwise_tie_rate": 0.015,
+      "pairwise_base_win_rate": 0.17,
+      "pairwise_net_overall": 0.645,
+      "axis_alignment_delta_mean": 1.2366666666666666,
+      "axis_alignment_delta_std_pooled": 1.040614134911581,
+      "case_fidelity_delta_mean": 0.03,
+      "case_fidelity_delta_std_pooled": 1.1456148276507832,
+      "client_role_fidelity_delta_mean": 0.19166666666666665,
+      "client_role_fidelity_delta_std_pooled": 0.5719727071965741,
+      "training_utility_delta_mean": 0.9783333333333332,
+      "training_utility_delta_std_pooled": 0.9603688527505112,
+      "axis_alignment_pairwise_steered_win_rate": 0.86,
+      "axis_alignment_pairwise_base_win_rate": 0.105,
+      "axis_alignment_pairwise_tie_rate": 0.035,
+      "axis_alignment_pairwise_net": 0.755,
+      "case_fidelity_pairwise_steered_win_rate": 0.435,
+      "case_fidelity_pairwise_base_win_rate": 0.395,
+      "case_fidelity_pairwise_tie_rate": 0.17,
+      "case_fidelity_pairwise_net": 0.04,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.525,
+      "client_role_fidelity_pairwise_base_win_rate": 0.215,
+      "client_role_fidelity_pairwise_tie_rate": 0.26,
+      "client_role_fidelity_pairwise_net": 0.31,
+      "training_utility_pairwise_steered_win_rate": 0.82,
+      "training_utility_pairwise_base_win_rate": 0.145,
+      "training_utility_pairwise_tie_rate": 0.035,
+      "training_utility_pairwise_net": 0.675,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.815
+      ],
+      "win_rate_mean_over_seeds": 0.815,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        0.03
+      ],
+      "case_fidelity_delta_mean_over_seeds": 0.03,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.755
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        0.04
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.31
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.675
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.755,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": 0.04,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.31,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.675,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "P_mismatched__a-1.5": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.595,
+      "pairwise_tie_rate": 0.075,
+      "pairwise_base_win_rate": 0.33,
+      "pairwise_net_overall": 0.265,
+      "axis_alignment_delta_mean": 0.5416666666666665,
+      "axis_alignment_delta_std_pooled": 1.030877457961582,
+      "case_fidelity_delta_mean": -0.04500000000000001,
+      "case_fidelity_delta_std_pooled": 0.9773419167426629,
+      "client_role_fidelity_delta_mean": 0.07666666666666666,
+      "client_role_fidelity_delta_std_pooled": 0.5084945099670858,
+      "training_utility_delta_mean": 0.4533333333333333,
+      "training_utility_delta_std_pooled": 0.9061763380024638,
+      "axis_alignment_pairwise_steered_win_rate": 0.61,
+      "axis_alignment_pairwise_base_win_rate": 0.235,
+      "axis_alignment_pairwise_tie_rate": 0.155,
+      "axis_alignment_pairwise_net": 0.375,
+      "case_fidelity_pairwise_steered_win_rate": 0.32,
+      "case_fidelity_pairwise_base_win_rate": 0.355,
+      "case_fidelity_pairwise_tie_rate": 0.325,
+      "case_fidelity_pairwise_net": -0.035,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.395,
+      "client_role_fidelity_pairwise_base_win_rate": 0.245,
+      "client_role_fidelity_pairwise_tie_rate": 0.36,
+      "client_role_fidelity_pairwise_net": 0.15,
+      "training_utility_pairwise_steered_win_rate": 0.63,
+      "training_utility_pairwise_base_win_rate": 0.25,
+      "training_utility_pairwise_tie_rate": 0.12,
+      "training_utility_pairwise_net": 0.38,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.595
+      ],
+      "win_rate_mean_over_seeds": 0.595,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        -0.04500000000000001
+      ],
+      "case_fidelity_delta_mean_over_seeds": -0.04500000000000001,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.375
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        -0.035
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.15
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.38
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.375,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": -0.035,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.15,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.38,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "P_mismatched__a-3.0": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.78,
+      "pairwise_tie_rate": 0.02,
+      "pairwise_base_win_rate": 0.2,
+      "pairwise_net_overall": 0.58,
+      "axis_alignment_delta_mean": 1.125,
+      "axis_alignment_delta_std_pooled": 1.1286360992119844,
+      "case_fidelity_delta_mean": -0.06333333333333331,
+      "case_fidelity_delta_std_pooled": 1.162559436951266,
+      "client_role_fidelity_delta_mean": 0.13666666666666663,
+      "client_role_fidelity_delta_std_pooled": 0.5756059608987926,
+      "training_utility_delta_mean": 0.88,
+      "training_utility_delta_std_pooled": 1.0143635114362766,
+      "axis_alignment_pairwise_steered_win_rate": 0.8,
+      "axis_alignment_pairwise_base_win_rate": 0.14,
+      "axis_alignment_pairwise_tie_rate": 0.06,
+      "axis_alignment_pairwise_net": 0.66,
+      "case_fidelity_pairwise_steered_win_rate": 0.405,
+      "case_fidelity_pairwise_base_win_rate": 0.405,
+      "case_fidelity_pairwise_tie_rate": 0.19,
+      "case_fidelity_pairwise_net": 0.0,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.525,
+      "client_role_fidelity_pairwise_base_win_rate": 0.245,
+      "client_role_fidelity_pairwise_tie_rate": 0.23,
+      "client_role_fidelity_pairwise_net": 0.28,
+      "training_utility_pairwise_steered_win_rate": 0.765,
+      "training_utility_pairwise_base_win_rate": 0.17,
+      "training_utility_pairwise_tie_rate": 0.065,
+      "training_utility_pairwise_net": 0.595,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.78
+      ],
+      "win_rate_mean_over_seeds": 0.78,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        -0.06333333333333331
+      ],
+      "case_fidelity_delta_mean_over_seeds": -0.06333333333333331,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.66
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        0.0
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.28
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.595
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.66,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": 0.0,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.28,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.595,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "global_aware__a-1.5": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.555,
+      "pairwise_tie_rate": 0.13,
+      "pairwise_base_win_rate": 0.315,
+      "pairwise_net_overall": 0.24,
+      "axis_alignment_delta_mean": 0.4783333333333333,
+      "axis_alignment_delta_std_pooled": 0.9874644859999326,
+      "case_fidelity_delta_mean": -0.06000000000000002,
+      "case_fidelity_delta_std_pooled": 0.9444339868702076,
+      "client_role_fidelity_delta_mean": 0.03166666666666667,
+      "client_role_fidelity_delta_std_pooled": 0.4673774349138678,
+      "training_utility_delta_mean": 0.33833333333333326,
+      "training_utility_delta_std_pooled": 0.8841050088460457,
+      "axis_alignment_pairwise_steered_win_rate": 0.6,
+      "axis_alignment_pairwise_base_win_rate": 0.235,
+      "axis_alignment_pairwise_tie_rate": 0.165,
+      "axis_alignment_pairwise_net": 0.365,
+      "case_fidelity_pairwise_steered_win_rate": 0.28,
+      "case_fidelity_pairwise_base_win_rate": 0.345,
+      "case_fidelity_pairwise_tie_rate": 0.375,
+      "case_fidelity_pairwise_net": -0.065,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.345,
+      "client_role_fidelity_pairwise_base_win_rate": 0.26,
+      "client_role_fidelity_pairwise_tie_rate": 0.395,
+      "client_role_fidelity_pairwise_net": 0.085,
+      "training_utility_pairwise_steered_win_rate": 0.55,
+      "training_utility_pairwise_base_win_rate": 0.275,
+      "training_utility_pairwise_tie_rate": 0.175,
+      "training_utility_pairwise_net": 0.275,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.555
+      ],
+      "win_rate_mean_over_seeds": 0.555,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        -0.06000000000000002
+      ],
+      "case_fidelity_delta_mean_over_seeds": -0.06000000000000002,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.365
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        -0.065
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.085
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.275
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.365,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": -0.065,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.085,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.275,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "global_aware__a-3.0": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.81,
+      "pairwise_tie_rate": 0.025,
+      "pairwise_base_win_rate": 0.165,
+      "pairwise_net_overall": 0.645,
+      "axis_alignment_delta_mean": 1.2233333333333334,
+      "axis_alignment_delta_std_pooled": 1.0344671199328772,
+      "case_fidelity_delta_mean": 0.021666666666666633,
+      "case_fidelity_delta_std_pooled": 1.0456669854425187,
+      "client_role_fidelity_delta_mean": 0.21666666666666665,
+      "client_role_fidelity_delta_std_pooled": 0.5161287522400675,
+      "training_utility_delta_mean": 1.04,
+      "training_utility_delta_std_pooled": 0.955428932178864,
+      "axis_alignment_pairwise_steered_win_rate": 0.835,
+      "axis_alignment_pairwise_base_win_rate": 0.11,
+      "axis_alignment_pairwise_tie_rate": 0.055,
+      "axis_alignment_pairwise_net": 0.725,
+      "case_fidelity_pairwise_steered_win_rate": 0.42,
+      "case_fidelity_pairwise_base_win_rate": 0.385,
+      "case_fidelity_pairwise_tie_rate": 0.195,
+      "case_fidelity_pairwise_net": 0.035,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.61,
+      "client_role_fidelity_pairwise_base_win_rate": 0.195,
+      "client_role_fidelity_pairwise_tie_rate": 0.195,
+      "client_role_fidelity_pairwise_net": 0.415,
+      "training_utility_pairwise_steered_win_rate": 0.815,
+      "training_utility_pairwise_base_win_rate": 0.12,
+      "training_utility_pairwise_tie_rate": 0.065,
+      "training_utility_pairwise_net": 0.695,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.81
+      ],
+      "win_rate_mean_over_seeds": 0.81,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        0.021666666666666633
+      ],
+      "case_fidelity_delta_mean_over_seeds": 0.021666666666666633,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.725
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        0.035
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.415
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.695
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.725,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": 0.035,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.415,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.695,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "global_blind__a-1.5": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.61,
+      "pairwise_tie_rate": 0.065,
+      "pairwise_base_win_rate": 0.325,
+      "pairwise_net_overall": 0.285,
+      "axis_alignment_delta_mean": 0.47666666666666674,
+      "axis_alignment_delta_std_pooled": 0.9709731658953756,
+      "case_fidelity_delta_mean": -0.065,
+      "case_fidelity_delta_std_pooled": 1.0245310580401596,
+      "client_role_fidelity_delta_mean": 0.048333333333333305,
+      "client_role_fidelity_delta_std_pooled": 0.5378945580274591,
+      "training_utility_delta_mean": 0.37,
+      "training_utility_delta_std_pooled": 0.8665320408258299,
+      "axis_alignment_pairwise_steered_win_rate": 0.635,
+      "axis_alignment_pairwise_base_win_rate": 0.245,
+      "axis_alignment_pairwise_tie_rate": 0.12,
+      "axis_alignment_pairwise_net": 0.39,
+      "case_fidelity_pairwise_steered_win_rate": 0.355,
+      "case_fidelity_pairwise_base_win_rate": 0.41,
+      "case_fidelity_pairwise_tie_rate": 0.235,
+      "case_fidelity_pairwise_net": -0.055,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.395,
+      "client_role_fidelity_pairwise_base_win_rate": 0.28,
+      "client_role_fidelity_pairwise_tie_rate": 0.325,
+      "client_role_fidelity_pairwise_net": 0.115,
+      "training_utility_pairwise_steered_win_rate": 0.585,
+      "training_utility_pairwise_base_win_rate": 0.26,
+      "training_utility_pairwise_tie_rate": 0.155,
+      "training_utility_pairwise_net": 0.325,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.61
+      ],
+      "win_rate_mean_over_seeds": 0.61,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        -0.065
+      ],
+      "case_fidelity_delta_mean_over_seeds": -0.065,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.39
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        -0.055
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.115
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.325
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.39,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": -0.055,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.115,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.325,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    },
+    "global_blind__a-3.0": {
+      "n": 200,
+      "target_pole": "negative",
+      "target_style": "resistant",
+      "pairwise_steered_win_rate": 0.805,
+      "pairwise_tie_rate": 0.01,
+      "pairwise_base_win_rate": 0.185,
+      "pairwise_net_overall": 0.62,
+      "axis_alignment_delta_mean": 1.28,
+      "axis_alignment_delta_std_pooled": 0.9957911427603682,
+      "case_fidelity_delta_mean": -0.11833333333333332,
+      "case_fidelity_delta_std_pooled": 1.1892563035593107,
+      "client_role_fidelity_delta_mean": 0.048333333333333346,
+      "client_role_fidelity_delta_std_pooled": 0.6891198089672879,
+      "training_utility_delta_mean": 0.9766666666666666,
+      "training_utility_delta_std_pooled": 1.0058219413881255,
+      "axis_alignment_pairwise_steered_win_rate": 0.875,
+      "axis_alignment_pairwise_base_win_rate": 0.085,
+      "axis_alignment_pairwise_tie_rate": 0.04,
+      "axis_alignment_pairwise_net": 0.79,
+      "case_fidelity_pairwise_steered_win_rate": 0.385,
+      "case_fidelity_pairwise_base_win_rate": 0.455,
+      "case_fidelity_pairwise_tie_rate": 0.16,
+      "case_fidelity_pairwise_net": -0.07,
+      "client_role_fidelity_pairwise_steered_win_rate": 0.49,
+      "client_role_fidelity_pairwise_base_win_rate": 0.27,
+      "client_role_fidelity_pairwise_tie_rate": 0.24,
+      "client_role_fidelity_pairwise_net": 0.22,
+      "training_utility_pairwise_steered_win_rate": 0.8,
+      "training_utility_pairwise_base_win_rate": 0.13,
+      "training_utility_pairwise_tie_rate": 0.07,
+      "training_utility_pairwise_net": 0.67,
+      "run_seed_values": [
+        42
+      ],
+      "win_rate_per_seed": [
+        0.805
+      ],
+      "win_rate_mean_over_seeds": 0.805,
+      "win_rate_std_over_seeds": NaN,
+      "case_fidelity_delta_per_seed": [
+        -0.11833333333333332
+      ],
+      "case_fidelity_delta_mean_over_seeds": -0.11833333333333332,
+      "case_fidelity_delta_std_over_seeds": NaN,
+      "axis_alignment_pairwise_net_per_seed": [
+        0.79
+      ],
+      "case_fidelity_pairwise_net_per_seed": [
+        -0.07
+      ],
+      "client_role_fidelity_pairwise_net_per_seed": [
+        0.22
+      ],
+      "training_utility_pairwise_net_per_seed": [
+        0.67
+      ],
+      "axis_alignment_pairwise_net_mean_over_seeds": 0.79,
+      "axis_alignment_pairwise_net_std_over_seeds": NaN,
+      "case_fidelity_pairwise_net_mean_over_seeds": -0.07,
+      "case_fidelity_pairwise_net_std_over_seeds": NaN,
+      "client_role_fidelity_pairwise_net_mean_over_seeds": 0.22,
+      "client_role_fidelity_pairwise_net_std_over_seeds": NaN,
+      "training_utility_pairwise_net_mean_over_seeds": 0.67,
+      "training_utility_pairwise_net_std_over_seeds": NaN
+    }
+  }
+}

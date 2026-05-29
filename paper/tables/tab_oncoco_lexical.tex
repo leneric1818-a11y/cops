@@ -1,0 +1,38 @@
+% auto-generated
+\begin{table*}[t]\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l l p{0.36\linewidth} p{0.36\linewidth}@{}}
+\toprule
+\textbf{Axis (neg.\ pole)} & \textbf{Model} & \textbf{Top words $\uparrow$ steered} & \textbf{Top words $\downarrow$ steered} \\
+\midrule
+openness & Qwen3-4B & hab (+3.0), einfach (+2.9), okay (+2.4), viel (+2.2), alles (+2.2) & fühlt ($-3.2$), werde ($-3.0$), angst ($-2.8$), sprechen ($-2.8$), verstehen ($-2.6$) \\
+ & Gemma & muss (+2.5), echt (+2.2), reden (+1.7), zwischen (+1.4), besser (+1.4) & überwältigend ($-2.4$), schnell ($-1.9$), funktionieren ($-1.5$), führen ($-1.5$), wollte ($-1.5$) \\
+ & Qwen3.5-9B & nichts (+4.0), erstmal (+3.8), machen (+3.5), kurz (+3.4), schauen (+3.3) & oft ($-4.6$), allein ($-4.3$), besonders ($-4.0$), überhaupt ($-4.0$), meinem ($-3.5$) \\
+ & Mistral-7B & einfach (+2.8), immer (+2.6), versuchen (+2.2), freue (+2.1), morgen (+2.0) & könnten ($-3.6$), helfen ($-3.4$), dabei ($-3.1$), meinung ($-3.0$), meine ($-2.9$) \\
+\midrule
+initiative & Qwen3-4B & okay (+2.1), will (+1.7), nie (+1.6), alles (+1.5), soll (+1.4) & verstehen ($-3.2$), man ($-3.0$), ändern ($-2.0$), andere ($-2.0$), würde ($-1.9$) \\
+ & Gemma & kompliziert (+1.5), klappt (+1.3), sehen (+1.3), diesem (+1.2), möchte (+1.2) & hat ($-2.6$), über ($-2.4$), gerade ($-2.3$), würde ($-2.3$), selbst ($-2.2$) \\
+ & Qwen3.5-9B & sehr (+5.9), danke (+4.5), haben (+3.6), gerne (+3.5), leider (+3.2) & vielleicht ($-5.5$), überhaupt ($-4.4$), könnte ($-4.1$), bevor ($-3.8$), ohne ($-3.5$) \\
+ & Mistral-7B & könnte (+2.8), versuchen (+2.0), trinken (+1.9), immer (+1.8), wichtig (+1.7) & kontrollieren ($-2.9$), meinung ($-2.5$), weitere ($-2.3$), weiterzuarbeiten ($-2.3$), ihren ($-2.3$) \\
+\midrule
+cooperation & Qwen3-4B & weiß (+7.3), einfach (+5.4), will (+4.6), sicher (+3.9), bin (+3.8) & klingt ($-4.2$), danke ($-4.0$), gerne ($-3.9$), sprechen ($-2.9$), gut ($-2.7$) \\
+ & Gemma & weiß (+3.7), überhaupt (+3.3), gar (+2.7), fühlt (+2.2), alles (+2.2) & gut ($-3.8$), können ($-3.4$), dank ($-3.0$), vielen ($-3.0$), müssen ($-2.9$) \\
+ & Qwen3.5-9B & gar (+6.0), einfach (+5.4), weiß (+4.6), alles (+4.1), erstmal (+3.7) & können ($-5.4$), könnten ($-4.2$), sobald ($-4.0$), gemeinsam ($-4.0$), sprechen ($-3.9$) \\
+ & Mistral-7B & einfach (+5.8), weiß (+5.2), immer (+3.4), will (+3.3), habe (+3.1) & unterstützung ($-5.3$), situation ($-4.2$), ihre ($-4.2$), unsere ($-4.0$), gemeinsam ($-3.9$) \\
+\midrule
+hopefulness & Qwen3-4B & weiß (+4.8), soll (+4.6), mehr (+4.2), fühle (+3.9), glaube (+3.9) & danke ($-5.0$), vielleicht ($-4.8$), gerne ($-4.8$), manchmal ($-4.7$), klingt ($-4.3$) \\
+ & Gemma & weiß (+4.2), alles (+3.4), ehrlich (+2.9), gesagt (+2.6), soll (+2.5) & können ($-3.5$), hoffe ($-3.3$), gut ($-3.2$), wäre ($-3.1$), bisschen ($-2.7$) \\
+ & Qwen3.5-9B & einfach (+5.4), gar (+5.3), habe (+4.7), egal (+4.6), weiß (+4.4) & vielleicht ($-6.9$), manchmal ($-5.1$), guten ($-4.4$), schritt ($-4.3$), könnten ($-4.0$) \\
+ & Mistral-7B & immer (+5.6), habe (+5.1), sehr (+4.0), weiß (+3.6), mehr (+3.4) & können ($-5.6$), vielleicht ($-5.2$), verstehen ($-4.8$), versuche ($-4.6$), sprechen ($-4.5$) \\
+\bottomrule
+\end{tabular}
+\caption{Monroe log-odds \citep{monroe2008fightin} top-5 unigrams
+distinguishing steered ($\alpha=-3.0$) from baseline responses, per
+axis (negative pole) and model. $z$-scores from an
+informative-Dirichlet prior ($\alpha_{\text{prior}}=0.01$); minimum
+total count $\geq 8$. Stop-list: closed-class German function words.
+Signatures are stable across all four models even where the
+top-1-argmax OnCoCo distribution does not shift significantly
+(openness, initiative).}
+\label{tab:oncoco-lexical}
+\end{table*}

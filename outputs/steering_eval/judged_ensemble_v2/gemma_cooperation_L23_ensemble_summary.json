@@ -1,0 +1,151 @@
+{
+  "eval_stem": "gemma_cooperation_L23",
+  "providers": [
+    {
+      "provider": "cluster_mistral",
+      "model": "mistralai/Magistral-Small-2509",
+      "effort": null
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-nano",
+      "effort": "high"
+    },
+    {
+      "provider": "ionos",
+      "model": "openai/gpt-oss-120b",
+      "effort": "high"
+    }
+  ],
+  "n_ensembled_rows": 1600,
+  "inter_rater_agreement": {
+    "pairwise_cohen_kappa": {
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__openai:gpt-5.4-nano@high": 0.4288648096446117,
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__ionos:openai/gpt-oss-120b@high": 0.4415254589566741,
+      "openai:gpt-5.4-nano@high__vs__ionos:openai/gpt-oss-120b@high": 0.5246371970024213
+    },
+    "fleiss_kappa": 0.4634143734400805
+  },
+  "by_variant_alpha": {
+    "P_matched__a1.5": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.545,
+      "pairwise_tie_rate": 0.215,
+      "pairwise_base_win_rate": 0.24,
+      "pairwise_net_overall": 0.305,
+      "axis_alignment_delta_mean": 0.43,
+      "axis_alignment_pairwise_net": 0.285,
+      "case_fidelity_delta_mean": 0.05833333333333335,
+      "case_fidelity_pairwise_net": 0.055,
+      "client_role_fidelity_delta_mean": 0.04333333333333332,
+      "client_role_fidelity_pairwise_net": 0.06,
+      "training_utility_delta_mean": 0.37,
+      "training_utility_pairwise_net": 0.28
+    },
+    "P_matched__a3.0": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.6,
+      "pairwise_tie_rate": 0.095,
+      "pairwise_base_win_rate": 0.305,
+      "pairwise_net_overall": 0.295,
+      "axis_alignment_delta_mean": 0.58,
+      "axis_alignment_pairwise_net": 0.33,
+      "case_fidelity_delta_mean": 0.04999999999999998,
+      "case_fidelity_pairwise_net": 0.055,
+      "client_role_fidelity_delta_mean": 0.05499999999999999,
+      "client_role_fidelity_pairwise_net": 0.075,
+      "training_utility_delta_mean": 0.44833333333333336,
+      "training_utility_pairwise_net": 0.29
+    },
+    "P_mismatched__a1.5": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.5,
+      "pairwise_tie_rate": 0.195,
+      "pairwise_base_win_rate": 0.305,
+      "pairwise_net_overall": 0.195,
+      "axis_alignment_delta_mean": 0.33666666666666667,
+      "axis_alignment_pairwise_net": 0.2,
+      "case_fidelity_delta_mean": 0.021666666666666678,
+      "case_fidelity_pairwise_net": 0.02,
+      "client_role_fidelity_delta_mean": 0.041666666666666644,
+      "client_role_fidelity_pairwise_net": 0.07,
+      "training_utility_delta_mean": 0.3016666666666667,
+      "training_utility_pairwise_net": 0.2
+    },
+    "P_mismatched__a3.0": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.66,
+      "pairwise_tie_rate": 0.1,
+      "pairwise_base_win_rate": 0.24,
+      "pairwise_net_overall": 0.42,
+      "axis_alignment_delta_mean": 0.565,
+      "axis_alignment_pairwise_net": 0.39,
+      "case_fidelity_delta_mean": 0.06833333333333332,
+      "case_fidelity_pairwise_net": 0.08,
+      "client_role_fidelity_delta_mean": 0.05833333333333334,
+      "client_role_fidelity_pairwise_net": 0.1,
+      "training_utility_delta_mean": 0.5050000000000001,
+      "training_utility_pairwise_net": 0.355
+    },
+    "global_aware__a1.5": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.53,
+      "pairwise_tie_rate": 0.22,
+      "pairwise_base_win_rate": 0.25,
+      "pairwise_net_overall": 0.28,
+      "axis_alignment_delta_mean": 0.44166666666666665,
+      "axis_alignment_pairwise_net": 0.32,
+      "case_fidelity_delta_mean": 0.05499999999999998,
+      "case_fidelity_pairwise_net": 0.085,
+      "client_role_fidelity_delta_mean": 0.03166666666666664,
+      "client_role_fidelity_pairwise_net": 0.09,
+      "training_utility_delta_mean": 0.3616666666666667,
+      "training_utility_pairwise_net": 0.275
+    },
+    "global_aware__a3.0": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.65,
+      "pairwise_tie_rate": 0.08,
+      "pairwise_base_win_rate": 0.27,
+      "pairwise_net_overall": 0.38,
+      "axis_alignment_delta_mean": 0.6133333333333333,
+      "axis_alignment_pairwise_net": 0.4,
+      "case_fidelity_delta_mean": 0.0916666666666667,
+      "case_fidelity_pairwise_net": 0.085,
+      "client_role_fidelity_delta_mean": 0.08666666666666666,
+      "client_role_fidelity_pairwise_net": 0.155,
+      "training_utility_delta_mean": 0.5366666666666667,
+      "training_utility_pairwise_net": 0.355
+    },
+    "global_blind__a1.5": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.44,
+      "pairwise_tie_rate": 0.285,
+      "pairwise_base_win_rate": 0.275,
+      "pairwise_net_overall": 0.165,
+      "axis_alignment_delta_mean": 0.2966666666666667,
+      "axis_alignment_pairwise_net": 0.195,
+      "case_fidelity_delta_mean": 0.06,
+      "case_fidelity_pairwise_net": 0.075,
+      "client_role_fidelity_delta_mean": 0.03833333333333334,
+      "client_role_fidelity_pairwise_net": 0.065,
+      "training_utility_delta_mean": 0.26666666666666666,
+      "training_utility_pairwise_net": 0.185
+    },
+    "global_blind__a3.0": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.595,
+      "pairwise_tie_rate": 0.135,
+      "pairwise_base_win_rate": 0.27,
+      "pairwise_net_overall": 0.325,
+      "axis_alignment_delta_mean": 0.5716666666666668,
+      "axis_alignment_pairwise_net": 0.4,
+      "case_fidelity_delta_mean": 0.07499999999999998,
+      "case_fidelity_pairwise_net": 0.125,
+      "client_role_fidelity_delta_mean": 0.06499999999999997,
+      "client_role_fidelity_pairwise_net": 0.145,
+      "training_utility_delta_mean": 0.46833333333333327,
+      "training_utility_pairwise_net": 0.32
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "eval_file": "outputs/steering_eval/prompt_baseline/qwen_cooperation_L20_promptsteer.jsonl",
+  "judge_provider": "cluster_mistral",
+  "judge_model": "mistralai/Magistral-Small-2509",
+  "reasoning_effort": null,
+  "axis": "cooperation",
+  "model_path": "Qwen/Qwen3-4B",
+  "n_pairs": 0,
+  "by_variant_alpha": {}
+}

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pt
+*.pth
+*.pkl
+*.ckpt
+*.log
+*.tmp
+*.swp
+.DS_Store
+.env
+*.safetensors

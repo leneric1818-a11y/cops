@@ -1,0 +1,89 @@
+name: control_taxonomy_v1
+paper_tracks:
+  - name: persona_vectors
+    title: Persona Vectors for Simulated Clients
+    focus: Monitoring and runtime control of client personas in counseling dialogue models.
+  - name: control_comparison
+    title: Comparing Control Mechanisms for Client Simulation
+    focus: System-level comparison of prompt, parameter, planner, and activation control.
+
+target_axes:
+  - name: openness
+    negative_style: defensive
+    positive_style: open
+  - name: initiative
+    negative_style: reactive
+    positive_style: explorative
+  - name: cooperation
+    negative_style: resistant
+    positive_style: cooperative
+  - name: hopefulness
+    negative_style: resigned
+    positive_style: hopeful
+
+methods:
+  - name: prompting
+    control_level: prompt
+    paper_track: control_comparison
+    config_source: configs/benchmarks/persona_openness_v1.json
+  - name: fine_tuning
+    control_level: parameter
+    paper_track: control_comparison
+    config_source: configs/experiments/label_conditioned_generation_end2end.yaml
+  - name: ndap
+    control_level: planner
+    paper_track: control_comparison
+    config_source: configs/experiments/label_conditioned_generation_end2end.yaml
+  - name: prompt_diff
+    control_level: activation
+    paper_track: persona_vectors
+    config_source: configs/benchmarks/persona_openness_v1.json
+  - name: paired_dense
+    control_level: activation
+    paper_track: persona_vectors
+    config_source: configs/benchmarks/persona_openness_v1.json
+  - name: loreft
+    control_level: activation_trained
+    paper_track: persona_vectors
+    config_source: configs/benchmarks/reft_ablation_chat_v3_nothink.json
+  - name: finetuning_plus_steering
+    control_level: parameter_plus_activation
+    paper_track: control_comparison
+    config_source: configs/experiments/label_conditioned_generation_end2end.yaml
+  - name: ndap_plus_steering
+    control_level: planner_plus_activation
+    paper_track: control_comparison
+    config_source: configs/experiments/label_conditioned_generation_end2end.yaml
+
+metrics:
+  direction:
+    automatic:
+      - classifier_delta
+      - projection_delta
+    manual:
+      - perceived_trait_shift
+  fidelity:
+    automatic:
+      - content_preservation_score
+      - drift_flag_rate
+      - numeric_change_rate
+      - yesno_flip_rate
+    manual:
+      - context_faithfulness
+  quality:
+    automatic:
+      - mean_token_jaccard_vs_base
+      - mean_novelty_ratio
+    manual:
+      - realism
+      - training_usefulness
+
+paper_artifacts:
+  figures:
+    - layerwise_separability
+    - steering_vs_drift_tradeoff
+    - main_method_comparison
+    - qualitative_triplets
+  tables:
+    - main_comparison
+    - persona_axis_overview

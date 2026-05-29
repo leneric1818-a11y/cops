@@ -1,0 +1,39 @@
+{
+  "eval_stem": "qwen_hopefulness_L18_withprompt",
+  "providers": [
+    {
+      "provider": "cluster_mistral",
+      "model": "mistralai/Magistral-Small-2509",
+      "effort": null
+    },
+    {
+      "provider": "ionos",
+      "model": "openai/gpt-oss-120b",
+      "effort": "high"
+    }
+  ],
+  "n_ensembled_rows": 200,
+  "inter_rater_agreement": {
+    "pairwise_cohen_kappa": {
+      "cluster_mistral:mistralai/Magistral-Small-2509__vs__ionos:openai/gpt-oss-120b@high": 0.3464052287581699
+    },
+    "fleiss_kappa": 0.34633847410887564
+  },
+  "by_variant_alpha": {
+    "global_blind__a-3.0": {
+      "n": 200,
+      "pairwise_steered_win_rate": 0.645,
+      "pairwise_tie_rate": 0.255,
+      "pairwise_base_win_rate": 0.1,
+      "pairwise_net_overall": 0.545,
+      "axis_alignment_delta_mean": 1.65,
+      "axis_alignment_pairwise_net": 0.745,
+      "case_fidelity_delta_mean": -0.1375,
+      "case_fidelity_pairwise_net": -0.025,
+      "client_role_fidelity_delta_mean": 0.18,
+      "client_role_fidelity_pairwise_net": 0.32,
+      "training_utility_delta_mean": 1.0125,
+      "training_utility_pairwise_net": 0.59
+    }
+  }
+}

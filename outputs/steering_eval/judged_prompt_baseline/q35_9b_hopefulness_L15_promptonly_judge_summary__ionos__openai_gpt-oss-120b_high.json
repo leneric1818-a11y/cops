@@ -1,0 +1,10 @@
+{
+  "eval_file": "outputs/steering_eval/prompt_baseline/q35_9b_hopefulness_L15_promptonly.jsonl",
+  "judge_provider": "ionos",
+  "judge_model": "openai/gpt-oss-120b",
+  "reasoning_effort": "high",
+  "axis": "hopefulness",
+  "model_path": "Qwen/Qwen3.5-9B",
+  "n_pairs": 0,
+  "by_variant_alpha": {}
+}

@@ -1,0 +1,59 @@
+% auto-generated pipeline overview for §1 (single-column)
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  node distance=2mm and 3mm,
+  block/.style={draw, rounded corners=2pt, align=center, inner sep=2pt,
+                minimum height=4mm, minimum width=24mm, fill=white},
+  data/.style={draw, fill=gray!10, align=center, inner sep=2pt,
+               minimum height=4mm, minimum width=24mm, font=\scriptsize\itshape},
+  audit/.style={draw, dashed, rounded corners=2pt, align=left,
+                inner sep=2pt, fill=yellow!12, font=\scriptsize,
+                minimum height=4mm, minimum width=32mm},
+  arr/.style={-{Stealth[length=3pt]}, thick},
+]
+
+% Top: input + pair gen
+\node[data] (ctx) {counseling context $c$};
+\node[block, below=of ctx] (gen) {GPT-mini@high (case-aware)};
+\node[data, below=of gen] (pairs) {pos / neg response pair};
+
+% Hidden state extraction
+\node[block, below=of pairs] (target) {target LLM forward, layer $L$};
+\node[data, below=of target] (hidden) {$h_\text{pos}, h_\text{neg}$};
+\node[block, below=of hidden] (vec) {$\Vglobal = \overline{h_\text{pos}} - \overline{h_\text{neg}}$};
+
+% Inference steering
+\node[block, below=of vec] (steer) {steered gen: $h_L \mathrel{+}= \alpha v$};
+\node[data, below=of steer] (resp) {steered vs baseline reply};
+\node[block, below=of resp, fill=blue!4] (judge) {3-provider judge ensemble};
+
+% Audit boxes on the RIGHT (single-column-friendly: pipeline narrower, Q tags compact)
+\node[audit, right=4mm of vec]   (q1) {\textbf{Q1: Which $L$?} \S\ref{sec:layer}};
+\node[audit, right=4mm of steer] (q2) {\textbf{Q2: Persona-aware?} \S\ref{sec:persona-conditioning}};
+\node[audit, right=4mm of judge] (q3) {\textbf{Q3: Validate?} \S\ref{sec:irr}};
+
+% Vertical arrows
+\draw[arr] (ctx) -- (gen);
+\draw[arr] (gen) -- (pairs);
+\draw[arr] (pairs) -- (target);
+\draw[arr] (target) -- (hidden);
+\draw[arr] (hidden) -- (vec);
+\draw[arr] (vec) -- (steer);
+\draw[arr] (steer) -- (resp);
+\draw[arr] (resp) -- (judge);
+
+% Audit linkages (faint, horizontal)
+\draw[gray, thin, dashed] (vec.east)   -- (q1.west);
+\draw[gray, thin, dashed] (steer.east) -- (q2.west);
+\draw[gray, thin, dashed] (judge.east) -- (q3.west);
+
+\end{tikzpicture}
+\caption{Pipeline and audit questions. From context $c$ to judge:
+case-aware contrast pair generation, hidden-state extraction at layer
+$L$, axis vector, steered generation ($h_L \mathrel{+}= \alpha v$),
+judge ensemble. The three audit questions Q1--Q3 (dashed) target
+layer choice, persona-aware vector construction, and judge reliability.}
+\label{fig:pipeline}
+\end{figure}

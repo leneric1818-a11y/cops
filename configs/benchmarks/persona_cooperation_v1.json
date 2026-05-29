@@ -1,0 +1,159 @@
+{
+  "name": "persona_cooperation_v1",
+  "direction_classifier": {
+    "train_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_1000_flat.jsonl",
+    "positive_label": "cooperative",
+    "negative_label": "resistant",
+    "style_field": "style",
+    "response_field": "response",
+    "group_field": "seed_id",
+    "axis_name": "cooperation"
+  },
+  "projection_monitor": {
+    "vector_path": "outputs/metrics/layerwise_separability_cooperation_gpt54mini_1000/layer_9_vectors.pt",
+    "model_path": "Qwen/Qwen3-4B",
+    "batch_size": 4
+  },
+  "shared_eval": {
+    "manifest_path": "outputs/metrics/eval_manifests/persona_cooperation_gpt54mini_100.jsonl",
+    "eval_limit": 100,
+    "family_params": {
+      "prompt_diff": {
+        "train_group_field": "original_index"
+      },
+      "paired_dense": {
+        "group_field": "seed_record_index"
+      },
+      "reft_loreft": {
+        "group_field": "seed_record_index"
+      }
+    }
+  },
+  "ranking": {
+    "directional_weight": 1.0,
+    "content_weight": 0.25,
+    "drift_weight": 0.25,
+    "significance_weight": 0.02,
+    "significance_threshold": 0.05
+  },
+  "runs": [
+    {
+      "name": "prompt_diff_l9_cooperative_chat",
+      "family": "prompt_diff",
+      "axis_name": "cooperation",
+      "target_style": "cooperative",
+      "params": {
+        "data_path": "data/processed/ncp_eval.jsonl",
+        "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar kooperativer wirken. Die Antwort darf Bereitschaft, Mitgehen oder ernsthaftes Erwägen eines Vorschlags zeigen, ohne neue Maßnahmen, Ereignisse oder Fakten zu erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar widerständiger wirken. Die Antwort darf Zweifel, Distanz oder Abwehr zeigen, soll aber nicht aggressiv werden und keine neuen Fakten oder Ereignisse erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext und ändere keine bekannten Fakten, Zeitangaben oder Ereignisse.",
+        "layers": "9",
+        "alphas": "1.5",
+        "prompt_format": "chat"
+      }
+    },
+    {
+      "name": "prompt_diff_l9_resistant_chat",
+      "family": "prompt_diff",
+      "axis_name": "cooperation",
+      "target_style": "resistant",
+      "params": {
+        "data_path": "data/processed/ncp_eval.jsonl",
+        "positive_instruction": "Ziel: Die nächste Klientenäußerung soll klar widerständiger wirken. Die Antwort darf Zweifel, Distanz oder Abwehr zeigen, soll aber nicht aggressiv werden und keine neuen Fakten oder Ereignisse erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "negative_instruction": "Ziel: Die nächste Klientenäußerung soll klar kooperativer wirken. Die Antwort darf Bereitschaft, Mitgehen oder ernsthaftes Erwägen eines Vorschlags zeigen, ohne neue Maßnahmen, Ereignisse oder Fakten zu erfinden. Der Klient bleibt in seiner Rolle und antwortet nur mit der nächsten Äußerung.",
+        "neutral_instruction": "Ziel: Der Klient antwortet als nächste Äußerung auf die letzte Aussage des Beraters. Bleibe eng am Fallkontext und ändere keine bekannten Fakten, Zeitangaben oder Ereignisse.",
+        "layers": "9",
+        "alphas": "1.5",
+        "prompt_format": "chat"
+      }
+    },
+    {
+      "name": "paired_dense_l9_cooperative_chat",
+      "family": "paired_dense",
+      "axis_name": "cooperation",
+      "target_style": "cooperative",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_1000.jsonl",
+        "positive_field": "cooperative_response",
+        "negative_field": "resistant_response",
+        "layers": "9",
+        "alphas": "1.5",
+        "prompt_format": "chat"
+      }
+    },
+    {
+      "name": "paired_dense_l9_resistant_chat",
+      "family": "paired_dense",
+      "axis_name": "cooperation",
+      "target_style": "resistant",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_1000.jsonl",
+        "positive_field": "resistant_response",
+        "negative_field": "cooperative_response",
+        "layers": "9",
+        "alphas": "1.5",
+        "prompt_format": "chat"
+      }
+    },
+    {
+      "name": "reft_gentle_l9_cooperative_chat",
+      "family": "reft_loreft",
+      "axis_name": "cooperation",
+      "target_style": "cooperative",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_1000.jsonl",
+        "target_field": "cooperative_response",
+        "model_path": "Qwen/Qwen3-4B",
+        "prompt_format": "chat",
+        "layers": "9",
+        "rank": 4,
+        "component": "block_output",
+        "target_mode": "full",
+        "train_limit": 128,
+        "epochs": 1.0,
+        "batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 0.0001,
+        "max_seq_len": 1024,
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42,
+        "config_id": "loreft_gentle_l9_cooperative_chat"
+      }
+    },
+    {
+      "name": "reft_gentle_l9_resistant_chat",
+      "family": "reft_loreft",
+      "axis_name": "cooperation",
+      "target_style": "resistant",
+      "params": {
+        "pair_data_path": "outputs/metrics/persona_pairs_cooperation_gpt54mini_1000.jsonl",
+        "target_field": "resistant_response",
+        "model_path": "Qwen/Qwen3-4B",
+        "prompt_format": "chat",
+        "layers": "9",
+        "rank": 4,
+        "component": "block_output",
+        "target_mode": "full",
+        "train_limit": 128,
+        "epochs": 1.0,
+        "batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 0.0001,
+        "max_seq_len": 1024,
+        "max_new_tokens": 96,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.05,
+        "do_sample": true,
+        "seed": 42,
+        "config_id": "loreft_gentle_l9_resistant_chat"
+      }
+    }
+  ]
+}

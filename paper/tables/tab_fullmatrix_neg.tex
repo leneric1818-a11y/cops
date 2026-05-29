@@ -1,0 +1,30 @@
+% auto-generated
+\begin{table}[t]\centering\small
+\begin{tabular}{ll c c r r}
+\toprule
+\textbf{Model} & \textbf{Axis} & \textbf{L} & \textbf{Best variant} & \textbf{\netpw} & \textbf{$\kappa$} \\
+\midrule
+Qwen3-4B & openness & L15 & \texttt{persona\_mismatched} & $-0.025$ & $0.53$ \\
+Qwen3-4B & initiative & L9 & \texttt{persona\_matched} & $+0.070$ & $0.57$ \\
+Qwen3-4B & cooperation & L20 & \texttt{case\_blind} & $+0.635$ & $0.48$ \\
+Qwen3-4B & hopefulness & L18 & \texttt{persona\_mismatched} & $+0.740$ & $0.53$ \\
+\midrule
+Gemma-4-E4B-it & openness & L3 & \texttt{case\_blind} & $+0.120$ & $0.62$ \\
+Gemma-4-E4B-it & initiative & L13 & \texttt{persona\_matched} & $+0.065$ & $0.52$ \\
+Gemma-4-E4B-it & cooperation & L23 & \texttt{case\_aware} & $+0.535$ & $0.49$ \\
+Gemma-4-E4B-it & hopefulness & L25 & \texttt{case\_blind} & $+0.495$ & $0.61$ \\
+\midrule
+Qwen3.5-9B & openness & L20 & \texttt{persona\_mismatched} & $+0.165$ & $0.36$ \\
+Qwen3.5-9B & initiative & L20 & \texttt{persona\_matched} & $+0.330$ & $0.32$ \\
+Qwen3.5-9B & cooperation & L15 & \texttt{persona\_matched} & $+0.565$ & $0.39$ \\
+Qwen3.5-9B & hopefulness & L15 & \texttt{persona\_mismatched} & $+0.750$ & $0.45$ \\
+\midrule
+Mistral-7B & openness & L15 & \texttt{persona\_mismatched} & $+0.065$ & $0.37$ \\
+Mistral-7B & initiative & L5 & \texttt{persona\_mismatched} & $+0.110$ & $0.51$ \\
+Mistral-7B & cooperation & L15 & \texttt{persona\_matched} & $+0.645$ & $0.39$ \\
+Mistral-7B & hopefulness & L20 & \texttt{case\_aware} & $+0.445$ & $0.43$ \\
+\bottomrule
+\end{tabular}
+\caption{\emph{Oracle / upper bound.} Negative-$\alpha$ steering at $\alpha=-3.0$ per (model, axis): best of the four variants by $\netpw$. Cell-mean lift over prespecified CA (Table~\ref{tab:fullmatrix-neg-headline}) is $+0.048$. $N=200$ held-out contexts per stem.}
+\label{tab:fullmatrix-neg-oracle}
+\end{table}

@@ -1,0 +1,23 @@
+{
+  "description": "Paper v2 manifest — new canonical layers from layer-sweep, full-matrix at α=1.5/3.0, 3-provider judge ensemble.",
+  "classifier_summaries": [
+    "../../outputs/steering_eval/paper_v2/scored/qwen_openness_L15_all_summary.json",
+    "../../outputs/steering_eval/paper_v2/scored/qwen_initiative_L9_summary.json",
+    "../../outputs/steering_eval/paper_v2/scored/qwen_cooperation_L20_summary.json",
+    "../../outputs/steering_eval/paper_v2/scored/qwen_hopefulness_L18_summary.json",
+    "../../outputs/steering_eval/paper_v2/scored/gemma_initiative_L13_summary.json",
+    "../../outputs/steering_eval/paper_v2/scored/gemma_cooperation_L23_summary.json",
+    "../../outputs/steering_eval/paper_v2/scored/gemma_hopefulness_L25_summary.json"
+  ],
+  "judge_summaries": [
+    "../../outputs/steering_eval/judged_ensemble_v2/qwen_openness_L15_seed42_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/qwen_openness_L15_seed123_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/qwen_openness_L15_seed2024_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/qwen_initiative_L9_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/qwen_cooperation_L20_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/qwen_hopefulness_L18_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/gemma_initiative_L13_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/gemma_cooperation_L23_ensemble_summary.json",
+    "../../outputs/steering_eval/judged_ensemble_v2/gemma_hopefulness_L25_ensemble_summary.json"
+  ]
+}

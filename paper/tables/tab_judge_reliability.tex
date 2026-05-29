@@ -1,0 +1,23 @@
+% Judge reliability evaluation — 4 tests × 4 judges on 120-example consistency sample
+\begin{table}[t]\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Judge} & \textbf{T1 stab.} & \textbf{T2 coh.} & \textbf{T3 easy acc} & \textbf{T4 retest} & \textbf{net bias} \\
+\midrule
+GPT-5.4-mini        & 0.642 & 0.988 & 0.794 & 0.875 & 0.233 \\
+Mistral-Small-24B   & 0.558 & 0.992 & 0.877 & 0.975 & \textbf{0.417} \\
+Llama-3.3-70B       & 0.653 & 0.978 & 0.758 & 0.924 & 0.271 \\
+GPT-OSS-120B        & \textbf{0.650} & 0.979 & \textbf{0.877} & 0.825 & \underline{0.175} \\
+\bottomrule
+\end{tabular}
+\caption{%
+  Judge reliability on 120 consistency-sample examples.
+  \textbf{T1 stab.}: fraction of pairwise winners unchanged after A/B position swap (higher = less bias).
+  \textbf{T2 coh.}: axis-alignment pointwise-delta direction matches pairwise winner (higher = more coherent).
+  \textbf{T3 easy acc}: leave-one-out anchor accuracy on examples where all 3 peer judges agree.
+  \textbf{T4 retest}: same-prompt determinism at $T\!=\!0$ (higher = more deterministic).
+  \textbf{Net bias}: T1 instability $-$ T4 non-determinism; isolates true positional bias from sampling noise (\textbf{bold} = worst, \underline{underline} = best).
+}
+\label{tab:judge-reliability}
+\end{table}
